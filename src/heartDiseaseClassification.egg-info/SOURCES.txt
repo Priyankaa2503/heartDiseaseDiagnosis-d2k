@@ -6,11 +6,13 @@ src/heartDiseaseClassification.egg-info/SOURCES.txt
 src/heartDiseaseClassification.egg-info/dependency_links.txt
 src/heartDiseaseClassification.egg-info/top_level.txt
 src/heartDiseaseClassification/components/__init__.py
+src/heartDiseaseClassification/components/data_ingestion.py
 src/heartDiseaseClassification/config/__init__.py
 src/heartDiseaseClassification/config/configuration.py
 src/heartDiseaseClassification/constants/__init__.py
 src/heartDiseaseClassification/entity/__init__.py
 src/heartDiseaseClassification/entity/config_entity.py
 src/heartDiseaseClassification/pipeline/__init__.py
+src/heartDiseaseClassification/pipeline/stage_01_data_ingestion.py
 src/heartDiseaseClassification/utils/__init__.py
 src/heartDiseaseClassification/utils/common.py
