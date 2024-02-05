@@ -1,0 +1,64 @@
+schema: '2.0'
+stages:
+  data_ingestion:
+    cmd: python src/heartDiseaseClassification/pipeline/stage_01_data_ingestion.py
+    deps:
+    - path: config/config.yaml
+      hash: md5
+      md5: fa65a33a8cc367726fd38a2ba1de147c
+      size: 649
+    - path: src/heartDiseaseClassification/pipeline/stage_01_data_ingestion.py
+      hash: md5
+      md5: a01466d5dde133b084c0e9ff2e711de8
+      size: 935
+    outs:
+    - path: artifacts/data_ingestion/my_data.csv
+      hash: md5
+      md5: 6481ed154d5b8ff83d7c09007aaa6ed0
+      size: 38114
+  prepare_base_model:
+    cmd: python src/heartDiseaseClassification/pipeline/stage_02_prepare_base_model.py
+    deps:
+    - path: artifacts/data_ingestion/my_data.csv
+      hash: md5
+      md5: 6481ed154d5b8ff83d7c09007aaa6ed0
+      size: 38114
+    - path: config/config.yaml
+      hash: md5
+      md5: fa65a33a8cc367726fd38a2ba1de147c
+      size: 649
+    - path: src/heartDiseaseClassification/pipeline/stage_02_prepare_base_model.py
+      hash: md5
+      md5: 6be9af4cdcf67fa1a91b80bb6c738228
+      size: 1051
+    params:
+      params.yaml:
+        PROBABILITY: true
+        RANDOM_STATE: 42
+        TEST_SIZE: 0.2
+    outs:
+    - path: artifacts/prepare_base_model
+      hash: md5
+      md5: 47ca03306924c13041bdab605b283f91.dir
+      size: 1282492
+      nfiles: 2
+  generate_report:
+    cmd: python src/heartDiseaseClassification/pipeline/stage_03_generate_report.py
+    deps:
+    - path: artifacts/prepare_base_model/base_model_updated.joblib
+      hash: md5
+      md5: f3b96489baafb566ca00a21c385ae51c
+      size: 1281094
+    - path: config/config.yaml
+      hash: md5
+      md5: fa65a33a8cc367726fd38a2ba1de147c
+      size: 649
+    - path: src/heartDiseaseClassification/pipeline/stage_03_generate_report.py
+      hash: md5
+      md5: 356262311f64b598a9b43c830a0a634d
+      size: 911
+    outs:
+    - path: artifacts/generate_report/report.txt
+      hash: md5
+      md5: f7a5366e3cce2c5c0be13c359dac492e
+      size: 334
