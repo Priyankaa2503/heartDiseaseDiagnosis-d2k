@@ -18,3 +18,10 @@ class PrepareBaseModelConfig:
     params_test_size: float
     params_random_state: int
     params_probability: bool
+
+
+@dataclass(frozen=True)
+class GenerateReportConfig:
+    root_dir: Path
+    model_path: Path
+    report_path: Path

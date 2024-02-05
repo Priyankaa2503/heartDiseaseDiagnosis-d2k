@@ -1,0 +1,31 @@
+stages:
+  data_ingestion:
+    cmd: python src/heartDiseaseClassification/pipeline/stage_01_data_ingestion.py
+    deps:
+      - src/heartDiseaseClassification/pipeline/stage_01_data_ingestion.py
+      - config/config.yaml
+    outs:
+      - artifacts/data_ingestion/my_data.csv
+
+  prepare_base_model:
+    cmd: python src/heartDiseaseClassification/pipeline/stage_02_prepare_base_model.py
+    deps:
+      - src/heartDiseaseClassification/pipeline/stage_02_prepare_base_model.py
+      - artifacts/data_ingestion/my_data.csv
+      - config/config.yaml
+    params:
+      - TEST_SIZE
+      - RANDOM_STATE
+      - PROBABILITY
+    outs:
+      - artifacts/prepare_base_model
+    
+  generate_report:
+    cmd: python src/heartDiseaseClassification/pipeline/stage_03_generate_report.py
+    deps:
+      - src/heartDiseaseClassification/pipeline/stage_03_generate_report.py
+      - artifacts/prepare_base_model/base_model_updated.joblib
+      - config/config.yaml
+    outs:
+      - artifacts/generate_report/report.txt
+    

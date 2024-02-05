@@ -427,3 +427,348 @@ Source-Age: 119
 [2024-02-06 01:37:13,192: INFO: common: created directory at: artifacts]
 [2024-02-06 01:37:13,192: INFO: common: created directory at: artifacts/prepare_base_model]
 [2024-02-06 01:37:13,411: INFO: main: >>>>> Stage Prepare Base Model completed <<<<<]
+[2024-02-06 02:02:22,703: WARNING: module_wrapper: From C:\Users\Aditya\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+]
+[2024-02-06 02:02:22,841: INFO: main: >>>>> Stage Data Ingestion started <<<<<]
+[2024-02-06 02:02:22,842: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-06 02:02:22,843: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-06 02:02:22,843: INFO: common: created directory at: artifacts]
+[2024-02-06 02:02:22,844: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-02-06 02:02:22,844: INFO: data_ingestion: File already exists of size: ~ 6 KB]
+[2024-02-06 02:02:22,846: INFO: main: >>>>> Stage Data Ingestion completed <<<<<]
+[2024-02-06 02:02:22,846: INFO: main: ********************************************]
+[2024-02-06 02:02:22,846: INFO: main: >>>>> Stage Prepare Base Model started <<<<<]
+[2024-02-06 02:02:22,847: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-06 02:02:22,848: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-06 02:02:22,848: INFO: common: created directory at: artifacts]
+[2024-02-06 02:02:22,848: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-02-06 02:02:22,856: ERROR: main: 'PrepareBaseModelConfig' object has no attribute 'X_train_scaled_path']
+Traceback (most recent call last):
+  File "C:\Users\Aditya\Documents\Aditya\Hackathons\init_prep\main.py", line 21, in <module>
+    prepare_base_model.main()
+  File "c:\users\aditya\documents\aditya\hackathons\init_prep\src\heartDiseaseClassification\pipeline\stage_02_prepare_base_model.py", line 17, in main
+    prepare_base_model.update_base_model()
+  File "c:\users\aditya\documents\aditya\hackathons\init_prep\src\heartDiseaseClassification\components\prepare_base_model.py", line 59, in update_base_model
+    X_train_scaled.to_csv(self.config.X_train_scaled_path, index=False)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'PrepareBaseModelConfig' object has no attribute 'X_train_scaled_path'
+[2024-02-06 02:03:01,512: WARNING: module_wrapper: From C:\Users\Aditya\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+]
+[2024-02-06 02:03:01,668: INFO: main: >>>>> Stage Data Ingestion started <<<<<]
+[2024-02-06 02:03:01,669: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-06 02:03:01,670: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-06 02:03:01,670: INFO: common: created directory at: artifacts]
+[2024-02-06 02:03:01,670: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-02-06 02:03:01,671: INFO: data_ingestion: File already exists of size: ~ 6 KB]
+[2024-02-06 02:03:01,672: INFO: main: >>>>> Stage Data Ingestion completed <<<<<]
+[2024-02-06 02:03:01,672: INFO: main: ********************************************]
+[2024-02-06 02:03:01,672: INFO: main: >>>>> Stage Prepare Base Model started <<<<<]
+[2024-02-06 02:03:01,678: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-06 02:03:01,694: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-06 02:03:01,698: INFO: common: created directory at: artifacts]
+[2024-02-06 02:03:01,698: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-02-06 02:03:01,699: ERROR: main: PrepareBaseModelConfig.__init__() missing 4 required positional arguments: 'X_train_scaled_path', 'X_test_scaled_path', 'y_train_path', and 'y_test_path']
+Traceback (most recent call last):
+  File "C:\Users\Aditya\Documents\Aditya\Hackathons\init_prep\main.py", line 21, in <module>
+    prepare_base_model.main()
+  File "c:\users\aditya\documents\aditya\hackathons\init_prep\src\heartDiseaseClassification\pipeline\stage_02_prepare_base_model.py", line 14, in main
+    prepare_base_model_config = config.get_prepare_base_model_config()
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\users\aditya\documents\aditya\hackathons\init_prep\src\heartDiseaseClassification\config\configuration.py", line 35, in get_prepare_base_model_config
+    prepare_base_model_config = PrepareBaseModelConfig(
+                                ^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: PrepareBaseModelConfig.__init__() missing 4 required positional arguments: 'X_train_scaled_path', 'X_test_scaled_path', 'y_train_path', and 'y_test_path'
+[2024-02-06 02:04:56,947: WARNING: module_wrapper: From C:\Users\Aditya\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+]
+[2024-02-06 02:04:57,095: INFO: main: >>>>> Stage Data Ingestion started <<<<<]
+[2024-02-06 02:04:57,096: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-06 02:04:57,097: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-06 02:04:57,097: INFO: common: created directory at: artifacts]
+[2024-02-06 02:04:57,098: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-02-06 02:04:57,098: INFO: data_ingestion: File already exists of size: ~ 6 KB]
+[2024-02-06 02:04:57,098: INFO: main: >>>>> Stage Data Ingestion completed <<<<<]
+[2024-02-06 02:04:57,099: INFO: main: ********************************************]
+[2024-02-06 02:04:57,099: INFO: main: >>>>> Stage Prepare Base Model started <<<<<]
+[2024-02-06 02:04:57,100: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-06 02:04:57,101: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-06 02:04:57,101: INFO: common: created directory at: artifacts]
+[2024-02-06 02:04:57,101: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-02-06 02:04:57,101: ERROR: main: "'ConfigBox' object has no attribute 'x_train_scaled_path'"]
+Traceback (most recent call last):
+  File "C:\Users\Aditya\AppData\Local\Programs\Python\Python311\Lib\site-packages\box\box.py", line 503, in __getitem__
+    return super().__getitem__(item)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'X_train_scaled_path'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Aditya\AppData\Local\Programs\Python\Python311\Lib\site-packages\box\box.py", line 536, in __getattr__
+    value = self.__getitem__(item, _ignore_default=True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Aditya\AppData\Local\Programs\Python\Python311\Lib\site-packages\box\box.py", line 524, in __getitem__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'X_train_scaled_path'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Aditya\AppData\Local\Programs\Python\Python311\Lib\site-packages\box\box.py", line 538, in __getattr__
+    value = object.__getattribute__(self, item)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ConfigBox' object has no attribute 'X_train_scaled_path'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Aditya\AppData\Local\Programs\Python\Python311\Lib\site-packages\box\config_box.py", line 28, in __getattr__
+    return super().__getattr__(item)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Aditya\AppData\Local\Programs\Python\Python311\Lib\site-packages\box\box.py", line 552, in __getattr__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'X_train_scaled_path'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Aditya\AppData\Local\Programs\Python\Python311\Lib\site-packages\box\box.py", line 503, in __getitem__
+    return super().__getitem__(item)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'x_train_scaled_path'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Aditya\AppData\Local\Programs\Python\Python311\Lib\site-packages\box\box.py", line 536, in __getattr__
+    value = self.__getitem__(item, _ignore_default=True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Aditya\AppData\Local\Programs\Python\Python311\Lib\site-packages\box\box.py", line 524, in __getitem__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'x_train_scaled_path'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Aditya\AppData\Local\Programs\Python\Python311\Lib\site-packages\box\box.py", line 538, in __getattr__
+    value = object.__getattribute__(self, item)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ConfigBox' object has no attribute 'x_train_scaled_path'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Aditya\Documents\Aditya\Hackathons\init_prep\main.py", line 21, in <module>
+    prepare_base_model.main()
+  File "c:\users\aditya\documents\aditya\hackathons\init_prep\src\heartDiseaseClassification\pipeline\stage_02_prepare_base_model.py", line 14, in main
+    prepare_base_model_config = config.get_prepare_base_model_config()
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\users\aditya\documents\aditya\hackathons\init_prep\src\heartDiseaseClassification\config\configuration.py", line 39, in get_prepare_base_model_config
+    X_train_scaled_path=Path(config.X_train_scaled_path),
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Aditya\AppData\Local\Programs\Python\Python311\Lib\site-packages\box\config_box.py", line 30, in __getattr__
+    return super().__getattr__(item.lower())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Aditya\AppData\Local\Programs\Python\Python311\Lib\site-packages\box\box.py", line 552, in __getattr__
+    raise BoxKeyError(str(err)) from _exception_cause(err)
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'x_train_scaled_path'"
+[2024-02-06 02:25:25,140: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-06 02:25:25,142: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-06 02:25:25,143: INFO: common: created directory at: artifacts]
+[2024-02-06 02:25:53,650: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-06 02:25:53,651: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-06 02:25:53,652: INFO: common: created directory at: artifacts]
+[2024-02-06 02:25:53,653: INFO: common: created directory at: artifacts/generate_report]
+[2024-02-06 02:26:15,451: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-06 02:26:15,453: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-06 02:26:15,454: INFO: common: created directory at: artifacts]
+[2024-02-06 02:26:15,455: INFO: common: created directory at: artifacts/generate_report]
+[2024-02-06 02:28:18,620: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-06 02:28:18,621: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-06 02:28:18,622: INFO: common: created directory at: artifacts]
+[2024-02-06 02:28:18,623: INFO: common: created directory at: artifacts/generate_report]
+[2024-02-06 02:28:39,969: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-06 02:28:39,972: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-06 02:28:39,974: INFO: common: created directory at: artifacts]
+[2024-02-06 02:28:39,975: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-02-06 02:28:39,977: INFO: 2851641664: File already exists of size: ~ 6 KB]
+[2024-02-06 02:29:11,025: WARNING: module_wrapper: From c:\Users\Aditya\Documents\Aditya\Hackathons\init_prep\venv\Lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+]
+[2024-02-06 02:29:11,352: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-06 02:29:11,353: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-06 02:29:11,355: INFO: common: created directory at: artifacts]
+[2024-02-06 02:29:11,355: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-02-06 02:30:09,113: WARNING: module_wrapper: From c:\Users\Aditya\Documents\Aditya\Hackathons\init_prep\venv\Lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+]
+[2024-02-06 02:30:09,438: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-06 02:30:09,441: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-06 02:30:09,443: INFO: common: created directory at: artifacts]
+[2024-02-06 02:30:09,444: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-02-06 02:30:24,038: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-06 02:30:24,040: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-06 02:30:24,040: INFO: common: created directory at: artifacts]
+[2024-02-06 02:30:24,041: INFO: common: created directory at: artifacts/generate_report]
+[2024-02-06 02:31:45,330: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-06 02:31:45,332: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-06 02:31:45,332: INFO: common: created directory at: artifacts]
+[2024-02-06 02:31:45,334: INFO: common: created directory at: artifacts/generate_report]
+[2024-02-06 02:39:34,388: WARNING: module_wrapper: From C:\Users\Aditya\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+]
+[2024-02-06 02:39:34,584: INFO: main: >>>>> Stage Data Ingestion started <<<<<]
+[2024-02-06 02:39:34,595: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-06 02:39:34,596: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-06 02:39:34,596: INFO: common: created directory at: artifacts]
+[2024-02-06 02:39:34,597: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-02-06 02:39:35,212: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 6288
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "8e3dce5021eebbb5401b84be8f841a39a45f6530e03270fac4afa93cfc92a5d7"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: CA9C:1DC0EE:2BDA31:429CE8:65C13F79
+Accept-Ranges: bytes
+Date: Mon, 05 Feb 2024 21:09:35 GMT
+Via: 1.1 varnish
+X-Served-By: cache-bom4732-BOM
+X-Cache: HIT
+X-Cache-Hits: 1
+X-Timer: S1707167375.037515,VS0,VE255
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: c90033d3bfd92ea8046b4d1658f9f40071f59408
+Expires: Mon, 05 Feb 2024 21:14:35 GMT
+Source-Age: 0
+
+]
+[2024-02-06 02:39:35,215: INFO: main: >>>>> Stage Data Ingestion completed <<<<<]
+[2024-02-06 02:39:35,215: INFO: main: ********************************************]
+[2024-02-06 02:39:35,215: INFO: main: >>>>> Stage Prepare Base Model started <<<<<]
+[2024-02-06 02:39:35,216: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-06 02:39:35,217: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-06 02:39:35,217: INFO: common: created directory at: artifacts]
+[2024-02-06 02:39:35,218: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-02-06 02:39:35,473: INFO: main: >>>>> Stage Prepare Base Model completed <<<<<]
+[2024-02-06 02:39:35,473: INFO: main: ********************************************]
+[2024-02-06 02:39:35,473: INFO: main: >>>>> Stage Generating Report started <<<<<]
+[2024-02-06 02:39:35,475: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-06 02:39:35,475: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-06 02:39:35,476: INFO: common: created directory at: artifacts]
+[2024-02-06 02:39:35,477: INFO: common: created directory at: artifacts/generate_report]
+[2024-02-06 02:39:35,477: ERROR: main: 'GenerateReport' object has no attribute 'download_file']
+Traceback (most recent call last):
+  File "C:\Users\Aditya\Documents\Aditya\Hackathons\init_prep\main.py", line 34, in <module>
+    generate_report.main()
+  File "c:\users\aditya\documents\aditya\hackathons\init_prep\src\heartDiseaseClassification\pipeline\stage_03_generate_report.py", line 16, in main
+    generate_report.download_file()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'GenerateReport' object has no attribute 'download_file'
+[2024-02-06 02:40:28,905: WARNING: module_wrapper: From C:\Users\Aditya\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+]
+[2024-02-06 02:40:29,070: INFO: main: >>>>> Stage Data Ingestion started <<<<<]
+[2024-02-06 02:40:29,087: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-06 02:40:29,103: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-06 02:40:29,104: INFO: common: created directory at: artifacts]
+[2024-02-06 02:40:29,105: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-02-06 02:40:29,224: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 6288
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "8e3dce5021eebbb5401b84be8f841a39a45f6530e03270fac4afa93cfc92a5d7"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: CA9C:1DC0EE:2BDA31:429CE8:65C13F79
+Accept-Ranges: bytes
+Date: Mon, 05 Feb 2024 21:10:29 GMT
+Via: 1.1 varnish
+X-Served-By: cache-bom4727-BOM
+X-Cache: HIT
+X-Cache-Hits: 1
+X-Timer: S1707167429.284667,VS0,VE1
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: e23b7376ee969ec063b24efbff7158134b878994
+Expires: Mon, 05 Feb 2024 21:15:29 GMT
+Source-Age: 54
+
+]
+[2024-02-06 02:40:29,229: INFO: main: >>>>> Stage Data Ingestion completed <<<<<]
+[2024-02-06 02:40:29,231: INFO: main: ********************************************]
+[2024-02-06 02:40:29,232: INFO: main: >>>>> Stage Prepare Base Model started <<<<<]
+[2024-02-06 02:40:29,234: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-06 02:40:29,236: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-06 02:40:29,238: INFO: common: created directory at: artifacts]
+[2024-02-06 02:40:29,240: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-02-06 02:40:29,466: INFO: main: >>>>> Stage Prepare Base Model completed <<<<<]
+[2024-02-06 02:40:29,468: INFO: main: ********************************************]
+[2024-02-06 02:40:29,468: INFO: main: >>>>> Stage Generating Report started <<<<<]
+[2024-02-06 02:40:29,470: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-06 02:40:29,470: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-06 02:40:29,471: INFO: common: created directory at: artifacts]
+[2024-02-06 02:40:29,476: INFO: common: created directory at: artifacts/generate_report]
+[2024-02-06 02:40:29,527: INFO: main: >>>>> Stage Generating Report completed <<<<<]
+[2024-02-06 02:55:35,498: INFO: stage_01_data_ingestion: >>>>> Stage Data Ingestion started <<<<<]
+[2024-02-06 02:55:35,499: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-06 02:55:35,500: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-06 02:55:35,500: INFO: common: created directory at: artifacts]
+[2024-02-06 02:55:35,500: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-02-06 02:55:35,500: INFO: data_ingestion: File already exists of size: ~ 6 KB]
+[2024-02-06 02:55:35,502: INFO: stage_01_data_ingestion: >>>>> Stage Data Ingestion completed <<<<<]
+[2024-02-06 02:57:00,634: WARNING: module_wrapper: From C:\Users\Aditya\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+]
+[2024-02-06 02:57:00,787: INFO: main: >>>>> Stage Data Ingestion started <<<<<]
+[2024-02-06 02:57:00,788: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-06 02:57:00,788: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-06 02:57:00,789: INFO: common: created directory at: artifacts]
+[2024-02-06 02:57:00,789: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-02-06 02:57:01,526: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 6288
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "8e3dce5021eebbb5401b84be8f841a39a45f6530e03270fac4afa93cfc92a5d7"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: CA9C:1DC0EE:2BDA31:429CE8:65C13F79
+Accept-Ranges: bytes
+Date: Mon, 05 Feb 2024 21:27:01 GMT
+Via: 1.1 varnish
+X-Served-By: cache-bom4740-BOM
+X-Cache: HIT
+X-Cache-Hits: 1
+X-Timer: S1707168421.263367,VS0,VE344
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: e3687aa9ea77d1fbf4ea51e50e801dc40d2d75fa
+Expires: Mon, 05 Feb 2024 21:32:01 GMT
+Source-Age: 0
+
+]
+[2024-02-06 02:57:01,530: INFO: main: >>>>> Stage Data Ingestion completed <<<<<]
+[2024-02-06 02:57:01,530: INFO: main: ********************************************]
+[2024-02-06 02:57:01,530: INFO: main: >>>>> Stage Prepare Base Model started <<<<<]
+[2024-02-06 02:57:01,532: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-06 02:57:01,533: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-06 02:57:01,533: INFO: common: created directory at: artifacts]
+[2024-02-06 02:57:01,534: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-02-06 02:57:01,762: INFO: main: >>>>> Stage Prepare Base Model completed <<<<<]
+[2024-02-06 02:57:01,762: INFO: main: ********************************************]
+[2024-02-06 02:57:01,762: INFO: main: >>>>> Stage Generating Report started <<<<<]
+[2024-02-06 02:57:01,763: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-06 02:57:01,764: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-06 02:57:01,764: INFO: common: created directory at: artifacts]
+[2024-02-06 02:57:01,766: INFO: common: created directory at: artifacts/generate_report]
+[2024-02-06 02:57:01,819: INFO: main: >>>>> Stage Generating Report completed <<<<<]

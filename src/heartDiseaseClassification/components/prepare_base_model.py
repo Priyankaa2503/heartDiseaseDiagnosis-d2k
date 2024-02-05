@@ -35,8 +35,8 @@ class PrepareBaseModel:
     @staticmethod
     def _prepare_full_model(model, X_train_scaled, y_train):
         full_model = model.fit(X_train_scaled, y_train)
-        y_pred = full_model.predict(X_train_scaled)
-        print("Classification Report:\n", classification_report(y_train, y_pred))
+        # y_pred = full_model.predict(X_train_scaled)
+        # print("Classification Report:\n", classification_report(y_train, y_pred))
         return full_model
 
     def update_base_model(self):
@@ -52,6 +52,18 @@ class PrepareBaseModel:
         scaler = StandardScaler()
         X_train_scaled = scaler.fit_transform(X_train)
         X_test_scaled = scaler.transform(X_test)
+        X_train_scaled = pd.DataFrame(X_train_scaled, columns=X.columns)
+        X_test_scaled = pd.DataFrame(X_test_scaled, columns=X.columns)
+        y_test = pd.DataFrame(y_test, columns=['target'])
+        y_train = pd.DataFrame(y_train, columns=['target'])
+        X_train_scaled.to_csv(
+            f"{self.config.root_dir.parent}/data_ingestion/X_train_scaled.csv", index=False)
+        X_test_scaled.to_csv(
+            f"{self.config.root_dir.parent}/data_ingestion/X_test_scaled.csv", index=False)
+        y_train.to_csv(
+            f"{self.config.root_dir.parent}/data_ingestion/y_train.csv", index=False)
+        y_test.to_csv(
+            f"{self.config.root_dir.parent}/data_ingestion/y_test.csv", index=False)
         self.full_model = self._prepare_full_model(
             model=self.model,
             X_train_scaled=X_train_scaled,
