@@ -2,7 +2,7 @@ from heartDiseaseClassification.config.configuration import ConfigurationManager
 from heartDiseaseClassification.components.data_ingestion import DataIngestion
 from heartDiseaseClassification import logger
 
-STAGE_NAME = "Data Ingestion Stage"
+STAGE_NAME = "Data Ingestion"
 
 
 class DataIngestionTrainingPipeline:
