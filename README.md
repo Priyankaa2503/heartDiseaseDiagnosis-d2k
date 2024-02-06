@@ -1,4 +1,4 @@
-# Heart Disease Diagnosis
+# Heart Disease Diagnosis 
 
 This project aims to develop an MLops Pipeline for Bias Detection and Mitigation in Heart Disease Diagnosis Models.
 
@@ -34,5 +34,5 @@ The accuracy of the ensemble model is 95%.
 ## Conclusion
 
 - The MLops pipeline with ensemble techniques ensures unbiased Heart Disease diagnosis models, promoting equitable predictions for diverse demographics.
-- The deployment demonstrates practical implementation of ethical healthcare solutions, emphasizing transparency and accountability.
+- The deployment demonstrates a practical implementation of ethical healthcare solutions, emphasizing transparency and accountability.
 - The collaboration and innovation among participants underscore the collective drive toward fair and reliable healthcare models.
