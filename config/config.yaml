@@ -16,8 +16,3 @@ prepare_model:
   data_path: artifacts/preprocessing_data
   model_path: artifacts/prepare_models
   score_path: artifacts/prepare_models
-
-generate_report:
-  root_dir: artifacts/generate_report
-  model_path: artifacts/prepare_base_model/base_model_updated.joblib
-  report_path: artifacts/generate_report/report.txt

@@ -23,9 +23,3 @@ class PrepareModelConfig:
     data_path: Path
     model_path: Path
     score_path: Path
-
-@dataclass(frozen=True)
-class GenerateReportConfig:
-    root_dir: Path
-    model_path: Path
-    report_path: Path
