@@ -45,7 +45,8 @@ class ConfigurationManager:
         prepare_model_config = PrepareModelConfig(
             root_dir=config.root_dir,
             data_path=config.data_path,
-            model_path=config.model_path
+            model_path=config.model_path,
+            score_path=config.score_path
         )
         return prepare_model_config
 

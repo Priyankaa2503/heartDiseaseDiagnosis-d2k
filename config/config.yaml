@@ -15,6 +15,7 @@ prepare_model:
   root_dir: artifacts/prepare_models
   data_path: artifacts/preprocessing_data
   model_path: artifacts/prepare_models
+  score_path: artifacts/prepare_models
 
 generate_report:
   root_dir: artifacts/generate_report

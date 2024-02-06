@@ -1,4 +1,4 @@
-import joblib
+import pickle
 import os
 
 
@@ -8,8 +8,8 @@ class PredictionPipeline:
         self.model
 
     def predict(self):
-        model = joblib.load(os.path.join(
-            'artifacts', 'prepare_base_model', 'base_model_updated.joblib'))
+        model = pickle.load(
+            open(os.path.join("models", "heart_disease_model.pkl"), "rb"))
         input = self.data
         prediction = model.predict(input)
         print("PREDICTION: ")

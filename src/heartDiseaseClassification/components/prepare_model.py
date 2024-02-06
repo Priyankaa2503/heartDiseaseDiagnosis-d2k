@@ -43,7 +43,14 @@ class PrepareModel:
             logger.info(f"Accuracy of {model} is {accuracy}")
             logger.info(
                 f"Classification report of {model} is {classification_report(y_test, y_pred)}")
-
+            score = [
+                accuracy,
+                classification_report(y_test, y_pred, output_dict=True),
+            ]
+            score_file_path = Path(self.config.score_path)
+            model_name = model.__class__.__name__
+            with open(f"{score_file_path}/{model_name}_scores.pkl", "wb") as f:
+                pickle.dump(score, f)
         voting_clf = VotingClassifier(
             estimators=[
                 ("decision_tree", decision_tree_model),
@@ -61,6 +68,13 @@ class PrepareModel:
         logger.info(f"Accuracy of {voting_clf} is {accuracy}")
         logger.info(
             f"Classification report of {voting_clf} is {classification_report(y_test, y_pred)}")
+        score = [
+            accuracy,
+            classification_report(y_test, y_pred, output_dict=True),
+        ]
+        score_file_path = Path(self.config.score_path)
+        with open(f"{score_file_path}/voting_clf_scores.pkl", "wb") as f:
+            pickle.dump(score, f)
         voting_clf_file_path = Path(self.config.model_path)
         with open(f"{voting_clf_file_path}/voting_clf.pkl", "wb") as f:
             pickle.dump(voting_clf, f)
