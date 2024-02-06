@@ -5,8 +5,8 @@ stages:
     deps:
     - path: config/config.yaml
       hash: md5
-      md5: fa65a33a8cc367726fd38a2ba1de147c
-      size: 649
+      md5: f88d8643c78c91d0ba12ca646fad298b
+      size: 597
     - path: src/heartDiseaseClassification/pipeline/stage_01_data_ingestion.py
       hash: md5
       md5: a01466d5dde133b084c0e9ff2e711de8
@@ -62,3 +62,46 @@ stages:
       hash: md5
       md5: f7a5366e3cce2c5c0be13c359dac492e
       size: 334
+  preprocessing_data:
+    cmd: python src/heartDiseaseClassification/pipeline/stage_02_data_preprocessing.py
+    deps:
+    - path: artifacts/data_ingestion
+      hash: md5
+      md5: cc762a2a491408479dd5e28c63abc6cb.dir
+      size: 44402
+      nfiles: 2
+    - path: config/config.yaml
+      hash: md5
+      md5: f88d8643c78c91d0ba12ca646fad298b
+      size: 597
+    - path: src/heartDiseaseClassification/pipeline/stage_02_data_preprocessing.py
+      hash: md5
+      md5: 22082993272ade4932309fc429dae694
+      size: 998
+    outs:
+    - path: artifacts/preprocessing_data
+      hash: md5
+      md5: f37f3741e75b96fc0407d8b3c2a402a4.dir
+      size: 70876
+      nfiles: 4
+  prepare_model:
+    cmd: python src/heartDiseaseClassification/pipeline/stage_03_prepare_model.py
+    deps:
+    - path: artifacts/preprocessing_data
+      hash: md5
+      md5: f37f3741e75b96fc0407d8b3c2a402a4.dir
+      size: 70876
+      nfiles: 4
+    - path: config/config.yaml
+      hash: md5
+      md5: f88d8643c78c91d0ba12ca646fad298b
+      size: 597
+    - path: src/heartDiseaseClassification/pipeline/stage_03_prepare_model.py
+      hash: md5
+      md5: 851243e3f6810e4453b564f3d658c418
+      size: 901
+    outs:
+    - path: artifacts/prepare_models/voting_clf.pkl
+      hash: md5
+      md5: 037151f3ee36d9635fe88aa1e402b84a
+      size: 1142367

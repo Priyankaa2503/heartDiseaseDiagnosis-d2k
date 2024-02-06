@@ -7,25 +7,21 @@ stages:
     outs:
       - artifacts/data_ingestion/my_data.csv
 
-  prepare_base_model:
-    cmd: python src/heartDiseaseClassification/pipeline/stage_02_prepare_base_model.py
+  preprocessing_data:
+    cmd: python src/heartDiseaseClassification/pipeline/stage_02_data_preprocessing.py
     deps:
-      - src/heartDiseaseClassification/pipeline/stage_02_prepare_base_model.py
-      - artifacts/data_ingestion/my_data.csv
+      - src/heartDiseaseClassification/pipeline/stage_02_data_preprocessing.py
+      - artifacts/data_ingestion
       - config/config.yaml
-    params:
-      - TEST_SIZE
-      - RANDOM_STATE
-      - PROBABILITY
     outs:
-      - artifacts/prepare_base_model
+      - artifacts/preprocessing_data
     
-  generate_report:
-    cmd: python src/heartDiseaseClassification/pipeline/stage_03_generate_report.py
+  prepare_model:
+    cmd: python src/heartDiseaseClassification/pipeline/stage_03_prepare_model.py
     deps:
-      - src/heartDiseaseClassification/pipeline/stage_03_generate_report.py
-      - artifacts/prepare_base_model/base_model_updated.joblib
+      - src/heartDiseaseClassification/pipeline/stage_03_prepare_model.py
+      - artifacts/preprocessing_data
       - config/config.yaml
     outs:
-      - artifacts/generate_report/report.txt
+      - artifacts/prepare_models/voting_clf.pkl
     

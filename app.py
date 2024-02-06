@@ -32,17 +32,16 @@ def trainRoute():
 
 
 def preprocess(data):
-
-    # age_threshold = 56
-    # target_variable = "target"
-    # data["age_binary"] = np.where(data["age"] > age_threshold, 1, 0)
-    # data = BinaryLabelDataset(
-    #     favorable_label=1,
-    #     unfavorable_label=0,
-    #     df=data,
-    #     label_names=[target_variable],
-    #     protected_attribute_names=["sex", "age_binary"],
-    # )
+    age_threshold = 56
+    target_variable = "target"
+    data["age_binary"] = np.where(data["age"] > age_threshold, 1, 0)
+    data = BinaryLabelDataset(
+        favorable_label=1,
+        unfavorable_label=0,
+        df=data,
+        label_names=[target_variable],
+        protected_attribute_names=["sex", "age_binary"],
+    )
     return data
 
 
@@ -51,11 +50,10 @@ def preprocess(data):
 def predictRoute():
     try:
         data = request.json
-        # data = preprocess(data)
-        # c1App.data = data
-        # result = c1App.classifier.predict()
-        # return jsonify(result)
-        return data
+        data = preprocess(data)
+        c1App.data = data
+        result = c1App.classifier.predict()
+        return jsonify(result)
     except Exception as e:
         return jsonify("Error: " + str(e))
 
