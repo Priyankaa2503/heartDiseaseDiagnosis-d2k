@@ -11,6 +11,11 @@ preprocessing_data:
   data_path: artifacts/data_ingestion/my_data.csv
   result_data_path: artifacts/preprocessing_data
 
+prepare_model:
+  root_dir: artifacts/prepare_models
+  data_path: artifacts/preprocessing_data
+  model_path: artifacts/prepare_models
+
 generate_report:
   root_dir: artifacts/generate_report
   model_path: artifacts/prepare_base_model/base_model_updated.joblib

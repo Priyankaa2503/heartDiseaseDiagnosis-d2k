@@ -18,6 +18,12 @@ class PreprocessingDataConfig:
 
 
 @dataclass(frozen=True)
+class PrepareModelConfig:
+    root_dir: Path
+    data_path: Path
+    model_path: Path
+
+@dataclass(frozen=True)
 class GenerateReportConfig:
     root_dir: Path
     model_path: Path

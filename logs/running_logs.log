@@ -1338,3 +1338,678 @@ y train shape: (820,)]
 y test shape: (205,)]
 [2024-02-06 10:43:01,451: INFO: preprocessing_data: Preprocessing completed and saved to artifacts\preprocessing_data]
 [2024-02-06 10:43:01,451: INFO: main: >>>>> Stage Preprocessing Data completed <<<<<]
+[2024-02-06 11:18:15,979: WARNING: module_wrapper: From C:\Users\Aditya\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+]
+[2024-02-06 11:18:16,274: INFO: main: >>>>> Stage Data Ingestion started <<<<<]
+[2024-02-06 11:18:16,280: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-06 11:18:16,280: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-06 11:18:16,280: INFO: common: created directory at: artifacts]
+[2024-02-06 11:18:16,280: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-02-06 11:18:17,739: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 6288
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "8e3dce5021eebbb5401b84be8f841a39a45f6530e03270fac4afa93cfc92a5d7"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 9E10:28B8E6:7FC415:8F6571:65C1AF96
+Accept-Ranges: bytes
+Date: Tue, 06 Feb 2024 05:48:17 GMT
+Via: 1.1 varnish
+X-Served-By: cache-bom4735-BOM
+X-Cache: HIT
+X-Cache-Hits: 3
+X-Timer: S1707198497.483336,VS0,VE238
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 69e2fa387bcfef3f6287bd76cc02ded9c01e87e9
+Expires: Tue, 06 Feb 2024 05:53:17 GMT
+Source-Age: 0
+
+]
+[2024-02-06 11:18:17,746: INFO: main: >>>>> Stage Data Ingestion completed <<<<<]
+[2024-02-06 11:18:17,746: INFO: main: ********************************************]
+[2024-02-06 11:18:17,746: INFO: main: >>>>> Stage Preprocessing Data started <<<<<]
+[2024-02-06 11:18:17,746: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-06 11:18:17,756: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-06 11:18:17,761: INFO: common: created directory at: artifacts]
+[2024-02-06 11:18:17,761: INFO: common: created directory at: artifacts/preprocessing_data]
+[2024-02-06 11:18:17,810: INFO: preprocessing_data: 
+
+X train shape: (820, 13)]
+[2024-02-06 11:18:17,810: INFO: preprocessing_data: 
+
+X test shape: (205, 13)]
+[2024-02-06 11:18:17,810: INFO: preprocessing_data: 
+
+y train shape: (820,)]
+[2024-02-06 11:18:17,810: INFO: preprocessing_data: 
+
+y test shape: (205,)]
+[2024-02-06 11:18:17,810: INFO: preprocessing_data: Preprocessing completed and saved to artifacts\preprocessing_data]
+[2024-02-06 11:18:17,810: INFO: main: >>>>> Stage Preprocessing Data completed <<<<<]
+[2024-02-06 11:18:17,810: INFO: main: ********************************************]
+[2024-02-06 11:18:17,810: INFO: main: >>>>> Stage Preparing Models started <<<<<]
+[2024-02-06 11:18:17,815: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-06 11:18:17,815: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-06 11:18:17,815: INFO: common: created directory at: artifacts]
+[2024-02-06 11:18:17,828: INFO: common: created directory at: artifacts/prepare_models]
+[2024-02-06 11:18:17,828: ERROR: main: unsupported operand type(s) for /: 'str' and 'str']
+Traceback (most recent call last):
+  File "C:\Users\Aditya\Documents\Aditya\Hackathons\init_prep\main.py", line 34, in <module>
+    generate_report.main()
+  File "c:\users\aditya\documents\aditya\hackathons\init_prep\src\heartDiseaseClassification\pipeline\stage_03_prepare_model.py", line 16, in main
+    prepare_model_config.prepare_models()
+  File "c:\users\aditya\documents\aditya\hackathons\init_prep\src\heartDiseaseClassification\components\prepare_model.py", line 21, in prepare_models
+    X_train = pd.read_csv(self.config.data_path / "X_train.csv")
+                          ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for /: 'str' and 'str'
+[2024-02-06 11:20:22,342: WARNING: module_wrapper: From C:\Users\Aditya\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+]
+[2024-02-06 11:20:22,641: INFO: main: >>>>> Stage Data Ingestion started <<<<<]
+[2024-02-06 11:20:22,641: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-06 11:20:22,641: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-06 11:20:22,641: INFO: common: created directory at: artifacts]
+[2024-02-06 11:20:22,641: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-02-06 11:20:22,641: INFO: data_ingestion: File already exists of size: ~ 6 KB]
+[2024-02-06 11:20:22,641: INFO: main: >>>>> Stage Data Ingestion completed <<<<<]
+[2024-02-06 11:20:22,641: INFO: main: ********************************************]
+[2024-02-06 11:20:22,641: INFO: main: >>>>> Stage Preprocessing Data started <<<<<]
+[2024-02-06 11:20:22,641: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-06 11:20:22,641: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-06 11:20:22,641: INFO: common: created directory at: artifacts]
+[2024-02-06 11:20:22,641: INFO: common: created directory at: artifacts/preprocessing_data]
+[2024-02-06 11:20:22,673: INFO: preprocessing_data: 
+
+X train shape: (820, 13)]
+[2024-02-06 11:20:22,673: INFO: preprocessing_data: 
+
+X test shape: (205, 13)]
+[2024-02-06 11:20:22,673: INFO: preprocessing_data: 
+
+y train shape: (820,)]
+[2024-02-06 11:20:22,673: INFO: preprocessing_data: 
+
+y test shape: (205,)]
+[2024-02-06 11:20:22,673: INFO: preprocessing_data: Preprocessing completed and saved to artifacts\preprocessing_data]
+[2024-02-06 11:20:22,673: INFO: main: >>>>> Stage Preprocessing Data completed <<<<<]
+[2024-02-06 11:20:22,673: INFO: main: ********************************************]
+[2024-02-06 11:20:22,673: INFO: main: >>>>> Stage Preparing Models started <<<<<]
+[2024-02-06 11:20:22,688: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-06 11:20:22,688: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-06 11:20:22,688: INFO: common: created directory at: artifacts]
+[2024-02-06 11:20:22,688: INFO: common: created directory at: artifacts/prepare_models]
+[2024-02-06 11:20:22,688: INFO: prepare_model: Training model: DecisionTreeClassifier(random_state=42)]
+[2024-02-06 11:20:22,706: INFO: prepare_model: Accuracy of DecisionTreeClassifier(random_state=42) is 0.9853658536585366]
+[2024-02-06 11:20:22,724: INFO: prepare_model: Classification report of DecisionTreeClassifier(random_state=42) is               precision    recall  f1-score   support
+
+           0       0.97      1.00      0.99       100
+           1       1.00      0.97      0.99       105
+
+    accuracy                           0.99       205
+   macro avg       0.99      0.99      0.99       205
+weighted avg       0.99      0.99      0.99       205
+]
+[2024-02-06 11:20:22,724: INFO: prepare_model: Training model: RandomForestClassifier(random_state=42)]
+[2024-02-06 11:20:22,974: INFO: prepare_model: Accuracy of RandomForestClassifier(random_state=42) is 1.0]
+[2024-02-06 11:20:22,974: INFO: prepare_model: Classification report of RandomForestClassifier(random_state=42) is               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00       100
+           1       1.00      1.00      1.00       105
+
+    accuracy                           1.00       205
+   macro avg       1.00      1.00      1.00       205
+weighted avg       1.00      1.00      1.00       205
+]
+[2024-02-06 11:20:22,990: INFO: prepare_model: Training model: GradientBoostingClassifier(random_state=42)]
+[2024-02-06 11:20:23,290: INFO: prepare_model: Accuracy of GradientBoostingClassifier(random_state=42) is 0.975609756097561]
+[2024-02-06 11:20:23,290: INFO: prepare_model: Classification report of GradientBoostingClassifier(random_state=42) is               precision    recall  f1-score   support
+
+           0       0.98      0.97      0.97       100
+           1       0.97      0.98      0.98       105
+
+    accuracy                           0.98       205
+   macro avg       0.98      0.98      0.98       205
+weighted avg       0.98      0.98      0.98       205
+]
+[2024-02-06 11:20:23,304: INFO: prepare_model: Training model: VotingClassifier(estimators=[('dt', DecisionTreeClassifier(random_state=42)),
+                             ('rf', RandomForestClassifier(random_state=42)),
+                             ('gb',
+                              GradientBoostingClassifier(random_state=42))]) using VotingClassifier and hard voting]
+[2024-02-06 11:20:23,842: INFO: prepare_model: Accuracy of VotingClassifier(estimators=[('dt', DecisionTreeClassifier(random_state=42)),
+                             ('rf', RandomForestClassifier(random_state=42)),
+                             ('gb',
+                              GradientBoostingClassifier(random_state=42))]) is 1.0]
+[2024-02-06 11:20:23,855: INFO: prepare_model: Classification report of VotingClassifier(estimators=[('dt', DecisionTreeClassifier(random_state=42)),
+                             ('rf', RandomForestClassifier(random_state=42)),
+                             ('gb',
+                              GradientBoostingClassifier(random_state=42))]) is               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00       100
+           1       1.00      1.00      1.00       105
+
+    accuracy                           1.00       205
+   macro avg       1.00      1.00      1.00       205
+weighted avg       1.00      1.00      1.00       205
+]
+[2024-02-06 11:20:23,855: ERROR: main: [Errno 13] Permission denied: 'artifacts/prepare_models']
+Traceback (most recent call last):
+  File "C:\Users\Aditya\Documents\Aditya\Hackathons\init_prep\main.py", line 34, in <module>
+    generate_report.main()
+  File "c:\users\aditya\documents\aditya\hackathons\init_prep\src\heartDiseaseClassification\pipeline\stage_03_prepare_model.py", line 16, in main
+    prepare_model_config.prepare_models()
+  File "c:\users\aditya\documents\aditya\hackathons\init_prep\src\heartDiseaseClassification\components\prepare_model.py", line 55, in prepare_models
+    joblib.dump(voting_clf, voting_clf_file_path)
+  File "C:\Users\Aditya\AppData\Local\Programs\Python\Python311\Lib\site-packages\joblib\numpy_pickle.py", line 552, in dump
+    with open(filename, 'wb') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'artifacts/prepare_models'
+[2024-02-06 11:26:17,999: WARNING: module_wrapper: From C:\Users\Aditya\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+]
+[2024-02-06 11:26:18,238: INFO: main: >>>>> Stage Data Ingestion started <<<<<]
+[2024-02-06 11:26:18,254: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-06 11:26:18,254: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-06 11:26:18,254: INFO: common: created directory at: artifacts]
+[2024-02-06 11:26:18,254: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-02-06 11:26:18,254: INFO: data_ingestion: File already exists of size: ~ 6 KB]
+[2024-02-06 11:26:18,254: INFO: main: >>>>> Stage Data Ingestion completed <<<<<]
+[2024-02-06 11:26:18,254: INFO: main: ********************************************]
+[2024-02-06 11:26:18,254: INFO: main: >>>>> Stage Preprocessing Data started <<<<<]
+[2024-02-06 11:26:18,254: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-06 11:26:18,254: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-06 11:26:18,254: INFO: common: created directory at: artifacts]
+[2024-02-06 11:26:18,254: INFO: common: created directory at: artifacts/preprocessing_data]
+[2024-02-06 11:26:18,291: INFO: preprocessing_data: 
+
+X train shape: (820, 13)]
+[2024-02-06 11:26:18,291: INFO: preprocessing_data: 
+
+X test shape: (205, 13)]
+[2024-02-06 11:26:18,291: INFO: preprocessing_data: 
+
+y train shape: (820,)]
+[2024-02-06 11:26:18,291: INFO: preprocessing_data: 
+
+y test shape: (205,)]
+[2024-02-06 11:26:18,291: INFO: preprocessing_data: Preprocessing completed and saved to artifacts\preprocessing_data]
+[2024-02-06 11:26:18,291: INFO: main: >>>>> Stage Preprocessing Data completed <<<<<]
+[2024-02-06 11:26:18,291: INFO: main: ********************************************]
+[2024-02-06 11:26:18,291: INFO: main: >>>>> Stage Preparing Models started <<<<<]
+[2024-02-06 11:26:18,299: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-06 11:26:18,299: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-06 11:26:18,301: INFO: common: created directory at: artifacts]
+[2024-02-06 11:26:18,302: INFO: common: created directory at: artifacts/prepare_models]
+[2024-02-06 11:26:18,302: INFO: prepare_model: Training model: DecisionTreeClassifier(random_state=42)]
+[2024-02-06 11:26:18,320: INFO: prepare_model: Accuracy of DecisionTreeClassifier(random_state=42) is 0.9853658536585366]
+[2024-02-06 11:26:18,336: INFO: prepare_model: Classification report of DecisionTreeClassifier(random_state=42) is               precision    recall  f1-score   support
+
+           0       0.97      1.00      0.99       100
+           1       1.00      0.97      0.99       105
+
+    accuracy                           0.99       205
+   macro avg       0.99      0.99      0.99       205
+weighted avg       0.99      0.99      0.99       205
+]
+[2024-02-06 11:26:18,336: INFO: prepare_model: Training model: RandomForestClassifier(random_state=42)]
+[2024-02-06 11:26:18,601: INFO: prepare_model: Accuracy of RandomForestClassifier(random_state=42) is 1.0]
+[2024-02-06 11:26:18,603: INFO: prepare_model: Classification report of RandomForestClassifier(random_state=42) is               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00       100
+           1       1.00      1.00      1.00       105
+
+    accuracy                           1.00       205
+   macro avg       1.00      1.00      1.00       205
+weighted avg       1.00      1.00      1.00       205
+]
+[2024-02-06 11:26:18,603: INFO: prepare_model: Training model: GradientBoostingClassifier(random_state=42)]
+[2024-02-06 11:26:18,853: INFO: prepare_model: Accuracy of GradientBoostingClassifier(random_state=42) is 0.975609756097561]
+[2024-02-06 11:26:18,853: INFO: prepare_model: Classification report of GradientBoostingClassifier(random_state=42) is               precision    recall  f1-score   support
+
+           0       0.98      0.97      0.97       100
+           1       0.97      0.98      0.98       105
+
+    accuracy                           0.98       205
+   macro avg       0.98      0.98      0.98       205
+weighted avg       0.98      0.98      0.98       205
+]
+[2024-02-06 11:26:18,869: INFO: prepare_model: Training model: VotingClassifier(estimators=[('dt', DecisionTreeClassifier(random_state=42)),
+                             ('rf', RandomForestClassifier(random_state=42)),
+                             ('gb',
+                              GradientBoostingClassifier(random_state=42))]) using VotingClassifier and hard voting]
+[2024-02-06 11:26:19,330: INFO: prepare_model: Accuracy of VotingClassifier(estimators=[('dt', DecisionTreeClassifier(random_state=42)),
+                             ('rf', RandomForestClassifier(random_state=42)),
+                             ('gb',
+                              GradientBoostingClassifier(random_state=42))]) is 1.0]
+[2024-02-06 11:26:19,342: INFO: prepare_model: Classification report of VotingClassifier(estimators=[('dt', DecisionTreeClassifier(random_state=42)),
+                             ('rf', RandomForestClassifier(random_state=42)),
+                             ('gb',
+                              GradientBoostingClassifier(random_state=42))]) is               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00       100
+           1       1.00      1.00      1.00       105
+
+    accuracy                           1.00       205
+   macro avg       1.00      1.00      1.00       205
+weighted avg       1.00      1.00      1.00       205
+]
+[2024-02-06 11:26:19,342: ERROR: main: [Errno 13] Permission denied: 'artifacts/prepare_models']
+Traceback (most recent call last):
+  File "C:\Users\Aditya\Documents\Aditya\Hackathons\init_prep\main.py", line 34, in <module>
+    generate_report.main()
+  File "c:\users\aditya\documents\aditya\hackathons\init_prep\src\heartDiseaseClassification\pipeline\stage_03_prepare_model.py", line 16, in main
+    prepare_model_config.prepare_models()
+  File "c:\users\aditya\documents\aditya\hackathons\init_prep\src\heartDiseaseClassification\components\prepare_model.py", line 55, in prepare_models
+    joblib.dump(voting_clf, voting_clf_file_path)
+  File "C:\Users\Aditya\AppData\Local\Programs\Python\Python311\Lib\site-packages\joblib\numpy_pickle.py", line 552, in dump
+    with open(filename, 'wb') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'artifacts/prepare_models'
+[2024-02-06 11:29:10,406: WARNING: module_wrapper: From C:\Users\Aditya\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+]
+[2024-02-06 11:29:10,724: INFO: main: >>>>> Stage Data Ingestion started <<<<<]
+[2024-02-06 11:29:10,856: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-06 11:29:11,040: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-06 11:29:11,040: INFO: common: created directory at: artifacts]
+[2024-02-06 11:29:11,040: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-02-06 11:29:11,040: INFO: data_ingestion: File already exists of size: ~ 6 KB]
+[2024-02-06 11:29:11,040: INFO: main: >>>>> Stage Data Ingestion completed <<<<<]
+[2024-02-06 11:29:11,040: INFO: main: ********************************************]
+[2024-02-06 11:29:11,040: INFO: main: >>>>> Stage Preprocessing Data started <<<<<]
+[2024-02-06 11:29:11,040: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-06 11:29:11,040: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-06 11:29:11,040: INFO: common: created directory at: artifacts]
+[2024-02-06 11:29:11,040: INFO: common: created directory at: artifacts/preprocessing_data]
+[2024-02-06 11:29:11,056: INFO: preprocessing_data: 
+
+X train shape: (820, 13)]
+[2024-02-06 11:29:11,056: INFO: preprocessing_data: 
+
+X test shape: (205, 13)]
+[2024-02-06 11:29:11,056: INFO: preprocessing_data: 
+
+y train shape: (820,)]
+[2024-02-06 11:29:11,056: INFO: preprocessing_data: 
+
+y test shape: (205,)]
+[2024-02-06 11:29:11,056: INFO: preprocessing_data: Preprocessing completed and saved to artifacts\preprocessing_data]
+[2024-02-06 11:29:11,056: INFO: main: >>>>> Stage Preprocessing Data completed <<<<<]
+[2024-02-06 11:29:11,056: INFO: main: ********************************************]
+[2024-02-06 11:29:11,056: INFO: main: >>>>> Stage Preparing Models started <<<<<]
+[2024-02-06 11:29:11,056: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-06 11:29:11,071: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-06 11:29:11,071: INFO: common: created directory at: artifacts]
+[2024-02-06 11:29:11,071: INFO: common: created directory at: artifacts/prepare_models]
+[2024-02-06 11:29:11,071: INFO: prepare_model: Training model: DecisionTreeClassifier(random_state=42)]
+[2024-02-06 11:29:11,071: INFO: prepare_model: Accuracy of DecisionTreeClassifier(random_state=42) is 0.9853658536585366]
+[2024-02-06 11:29:11,087: INFO: prepare_model: Classification report of DecisionTreeClassifier(random_state=42) is               precision    recall  f1-score   support
+
+           0       0.97      1.00      0.99       100
+           1       1.00      0.97      0.99       105
+
+    accuracy                           0.99       205
+   macro avg       0.99      0.99      0.99       205
+weighted avg       0.99      0.99      0.99       205
+]
+[2024-02-06 11:29:11,087: INFO: prepare_model: Training model: RandomForestClassifier(random_state=42)]
+[2024-02-06 11:29:11,310: INFO: prepare_model: Accuracy of RandomForestClassifier(random_state=42) is 1.0]
+[2024-02-06 11:29:11,324: INFO: prepare_model: Classification report of RandomForestClassifier(random_state=42) is               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00       100
+           1       1.00      1.00      1.00       105
+
+    accuracy                           1.00       205
+   macro avg       1.00      1.00      1.00       205
+weighted avg       1.00      1.00      1.00       205
+]
+[2024-02-06 11:29:11,324: INFO: prepare_model: Training model: GradientBoostingClassifier(random_state=42)]
+[2024-02-06 11:29:11,528: INFO: prepare_model: Accuracy of GradientBoostingClassifier(random_state=42) is 0.975609756097561]
+[2024-02-06 11:29:11,528: INFO: prepare_model: Classification report of GradientBoostingClassifier(random_state=42) is               precision    recall  f1-score   support
+
+           0       0.98      0.97      0.97       100
+           1       0.97      0.98      0.98       105
+
+    accuracy                           0.98       205
+   macro avg       0.98      0.98      0.98       205
+weighted avg       0.98      0.98      0.98       205
+]
+[2024-02-06 11:29:11,528: INFO: prepare_model: Training model: VotingClassifier(estimators=[('dt', DecisionTreeClassifier(random_state=42)),
+                             ('rf', RandomForestClassifier(random_state=42)),
+                             ('gb',
+                              GradientBoostingClassifier(random_state=42))]) using VotingClassifier and hard voting]
+[2024-02-06 11:29:12,063: INFO: prepare_model: Accuracy of VotingClassifier(estimators=[('dt', DecisionTreeClassifier(random_state=42)),
+                             ('rf', RandomForestClassifier(random_state=42)),
+                             ('gb',
+                              GradientBoostingClassifier(random_state=42))]) is 1.0]
+[2024-02-06 11:29:12,078: INFO: prepare_model: Classification report of VotingClassifier(estimators=[('dt', DecisionTreeClassifier(random_state=42)),
+                             ('rf', RandomForestClassifier(random_state=42)),
+                             ('gb',
+                              GradientBoostingClassifier(random_state=42))]) is               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00       100
+           1       1.00      1.00      1.00       105
+
+    accuracy                           1.00       205
+   macro avg       1.00      1.00      1.00       205
+weighted avg       1.00      1.00      1.00       205
+]
+[2024-02-06 11:29:12,078: ERROR: main: [Errno 13] Permission denied: 'artifacts\\prepare_models']
+Traceback (most recent call last):
+  File "C:\Users\Aditya\Documents\Aditya\Hackathons\init_prep\main.py", line 34, in <module>
+    generate_report.main()
+  File "c:\users\aditya\documents\aditya\hackathons\init_prep\src\heartDiseaseClassification\pipeline\stage_03_prepare_model.py", line 16, in main
+    prepare_model_config.prepare_models()
+  File "c:\users\aditya\documents\aditya\hackathons\init_prep\src\heartDiseaseClassification\components\prepare_model.py", line 55, in prepare_models
+    joblib.dump(voting_clf, voting_clf_file_path)
+  File "C:\Users\Aditya\AppData\Local\Programs\Python\Python311\Lib\site-packages\joblib\numpy_pickle.py", line 552, in dump
+    with open(filename, 'wb') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'artifacts\\prepare_models'
+[2024-02-06 11:34:17,008: WARNING: module_wrapper: From C:\Users\Aditya\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+]
+[2024-02-06 11:34:17,314: INFO: main: >>>>> Stage Data Ingestion started <<<<<]
+[2024-02-06 11:34:17,317: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-06 11:34:17,322: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-06 11:34:17,327: INFO: common: created directory at: artifacts]
+[2024-02-06 11:34:17,327: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-02-06 11:34:18,775: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 6288
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "8e3dce5021eebbb5401b84be8f841a39a45f6530e03270fac4afa93cfc92a5d7"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 9E10:28B8E6:7FC415:8F6571:65C1AF96
+Accept-Ranges: bytes
+Date: Tue, 06 Feb 2024 06:04:18 GMT
+Via: 1.1 varnish
+X-Served-By: cache-bom4728-BOM
+X-Cache: HIT
+X-Cache-Hits: 1
+X-Timer: S1707199458.400749,VS0,VE253
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 0084f1b495ad9f9250ad9a9fde8142445f95a940
+Expires: Tue, 06 Feb 2024 06:09:18 GMT
+Source-Age: 0
+
+]
+[2024-02-06 11:34:18,784: INFO: main: >>>>> Stage Data Ingestion completed <<<<<]
+[2024-02-06 11:34:18,784: INFO: main: ********************************************]
+[2024-02-06 11:34:18,784: INFO: main: >>>>> Stage Preprocessing Data started <<<<<]
+[2024-02-06 11:34:18,791: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-06 11:34:18,791: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-06 11:34:18,791: INFO: common: created directory at: artifacts]
+[2024-02-06 11:34:18,791: INFO: common: created directory at: artifacts/preprocessing_data]
+[2024-02-06 11:34:18,832: INFO: preprocessing_data: 
+
+X train shape: (820, 13)]
+[2024-02-06 11:34:18,832: INFO: preprocessing_data: 
+
+X test shape: (205, 13)]
+[2024-02-06 11:34:18,832: INFO: preprocessing_data: 
+
+y train shape: (820,)]
+[2024-02-06 11:34:18,832: INFO: preprocessing_data: 
+
+y test shape: (205,)]
+[2024-02-06 11:34:18,832: INFO: preprocessing_data: Preprocessing completed and saved to artifacts\preprocessing_data]
+[2024-02-06 11:34:18,832: INFO: main: >>>>> Stage Preprocessing Data completed <<<<<]
+[2024-02-06 11:34:18,832: INFO: main: ********************************************]
+[2024-02-06 11:34:18,832: INFO: main: >>>>> Stage Preparing Models started <<<<<]
+[2024-02-06 11:34:18,832: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-06 11:34:18,832: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-06 11:34:18,832: INFO: common: created directory at: artifacts]
+[2024-02-06 11:34:18,842: INFO: common: created directory at: artifacts/prepare_models]
+[2024-02-06 11:34:18,848: INFO: prepare_model: Training model: DecisionTreeClassifier(random_state=42)]
+[2024-02-06 11:34:18,864: INFO: prepare_model: Accuracy of DecisionTreeClassifier(random_state=42) is 0.9853658536585366]
+[2024-02-06 11:34:18,874: INFO: prepare_model: Classification report of DecisionTreeClassifier(random_state=42) is               precision    recall  f1-score   support
+
+           0       0.97      1.00      0.99       100
+           1       1.00      0.97      0.99       105
+
+    accuracy                           0.99       205
+   macro avg       0.99      0.99      0.99       205
+weighted avg       0.99      0.99      0.99       205
+]
+[2024-02-06 11:34:18,874: INFO: prepare_model: Training model: RandomForestClassifier(random_state=42)]
+[2024-02-06 11:34:19,163: INFO: prepare_model: Accuracy of RandomForestClassifier(random_state=42) is 1.0]
+[2024-02-06 11:34:19,163: INFO: prepare_model: Classification report of RandomForestClassifier(random_state=42) is               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00       100
+           1       1.00      1.00      1.00       105
+
+    accuracy                           1.00       205
+   macro avg       1.00      1.00      1.00       205
+weighted avg       1.00      1.00      1.00       205
+]
+[2024-02-06 11:34:19,180: INFO: prepare_model: Training model: GradientBoostingClassifier(random_state=42)]
+[2024-02-06 11:34:19,465: INFO: prepare_model: Accuracy of GradientBoostingClassifier(random_state=42) is 0.975609756097561]
+[2024-02-06 11:34:19,465: INFO: prepare_model: Classification report of GradientBoostingClassifier(random_state=42) is               precision    recall  f1-score   support
+
+           0       0.98      0.97      0.97       100
+           1       0.97      0.98      0.98       105
+
+    accuracy                           0.98       205
+   macro avg       0.98      0.98      0.98       205
+weighted avg       0.98      0.98      0.98       205
+]
+[2024-02-06 11:34:19,465: INFO: prepare_model: Training model: VotingClassifier(estimators=[('dt', DecisionTreeClassifier(random_state=42)),
+                             ('rf', RandomForestClassifier(random_state=42)),
+                             ('gb',
+                              GradientBoostingClassifier(random_state=42))]) using VotingClassifier and hard voting]
+[2024-02-06 11:34:19,908: INFO: prepare_model: Accuracy of VotingClassifier(estimators=[('dt', DecisionTreeClassifier(random_state=42)),
+                             ('rf', RandomForestClassifier(random_state=42)),
+                             ('gb',
+                              GradientBoostingClassifier(random_state=42))]) is 1.0]
+[2024-02-06 11:34:19,945: INFO: prepare_model: Classification report of VotingClassifier(estimators=[('dt', DecisionTreeClassifier(random_state=42)),
+                             ('rf', RandomForestClassifier(random_state=42)),
+                             ('gb',
+                              GradientBoostingClassifier(random_state=42))]) is               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00       100
+           1       1.00      1.00      1.00       105
+
+    accuracy                           1.00       205
+   macro avg       1.00      1.00      1.00       205
+weighted avg       1.00      1.00      1.00       205
+]
+[2024-02-06 11:34:19,975: INFO: main: >>>>> Stage Preparing Models completed <<<<<]
+[2024-02-06 11:36:01,934: WARNING: module_wrapper: From C:\Users\Aditya\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+]
+[2024-02-06 11:36:02,139: INFO: main: >>>>> Stage Data Ingestion started <<<<<]
+[2024-02-06 11:36:02,139: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-06 11:36:02,139: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-06 11:36:02,139: INFO: common: created directory at: artifacts]
+[2024-02-06 11:36:02,139: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-02-06 11:36:02,139: INFO: data_ingestion: File already exists of size: ~ 6 KB]
+[2024-02-06 11:36:02,165: INFO: main: >>>>> Stage Data Ingestion completed <<<<<]
+[2024-02-06 11:36:02,171: INFO: main: ********************************************]
+[2024-02-06 11:36:02,171: INFO: main: >>>>> Stage Preprocessing Data started <<<<<]
+[2024-02-06 11:36:02,174: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-06 11:36:02,177: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-06 11:36:02,177: INFO: common: created directory at: artifacts]
+[2024-02-06 11:36:02,178: INFO: common: created directory at: artifacts/preprocessing_data]
+[2024-02-06 11:36:02,218: INFO: preprocessing_data: 
+
+X train shape: (820, 13)]
+[2024-02-06 11:36:02,218: INFO: preprocessing_data: 
+
+X test shape: (205, 13)]
+[2024-02-06 11:36:02,218: INFO: preprocessing_data: 
+
+y train shape: (820,)]
+[2024-02-06 11:36:02,218: INFO: preprocessing_data: 
+
+y test shape: (205,)]
+[2024-02-06 11:36:02,218: INFO: preprocessing_data: Preprocessing completed and saved to artifacts\preprocessing_data]
+[2024-02-06 11:36:02,218: INFO: main: >>>>> Stage Preprocessing Data completed <<<<<]
+[2024-02-06 11:36:02,218: INFO: main: ********************************************]
+[2024-02-06 11:36:02,218: INFO: main: >>>>> Stage Preparing Models started <<<<<]
+[2024-02-06 11:36:02,233: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-06 11:36:02,233: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-06 11:36:02,233: INFO: common: created directory at: artifacts]
+[2024-02-06 11:36:02,233: INFO: common: created directory at: artifacts/prepare_models]
+[2024-02-06 11:36:02,233: INFO: prepare_model: Training model: DecisionTreeClassifier(random_state=42)]
+[2024-02-06 11:36:02,233: INFO: prepare_model: Accuracy of DecisionTreeClassifier(random_state=42) is 0.9853658536585366]
+[2024-02-06 11:36:02,249: INFO: prepare_model: Classification report of DecisionTreeClassifier(random_state=42) is               precision    recall  f1-score   support
+
+           0       0.97      1.00      0.99       100
+           1       1.00      0.97      0.99       105
+
+    accuracy                           0.99       205
+   macro avg       0.99      0.99      0.99       205
+weighted avg       0.99      0.99      0.99       205
+]
+[2024-02-06 11:36:02,249: INFO: prepare_model: Training model: RandomForestClassifier(random_state=42)]
+[2024-02-06 11:36:02,469: INFO: prepare_model: Accuracy of RandomForestClassifier(random_state=42) is 1.0]
+[2024-02-06 11:36:02,469: INFO: prepare_model: Classification report of RandomForestClassifier(random_state=42) is               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00       100
+           1       1.00      1.00      1.00       105
+
+    accuracy                           1.00       205
+   macro avg       1.00      1.00      1.00       205
+weighted avg       1.00      1.00      1.00       205
+]
+[2024-02-06 11:36:02,469: INFO: prepare_model: Training model: GradientBoostingClassifier(random_state=42)]
+[2024-02-06 11:36:02,721: INFO: prepare_model: Accuracy of GradientBoostingClassifier(random_state=42) is 0.975609756097561]
+[2024-02-06 11:36:02,737: INFO: prepare_model: Classification report of GradientBoostingClassifier(random_state=42) is               precision    recall  f1-score   support
+
+           0       0.98      0.97      0.97       100
+           1       0.97      0.98      0.98       105
+
+    accuracy                           0.98       205
+   macro avg       0.98      0.98      0.98       205
+weighted avg       0.98      0.98      0.98       205
+]
+[2024-02-06 11:36:02,737: INFO: prepare_model: Training model: VotingClassifier(estimators=[('dt', DecisionTreeClassifier(random_state=42)),
+                             ('rf', RandomForestClassifier(random_state=42)),
+                             ('gb',
+                              GradientBoostingClassifier(random_state=42))]) using VotingClassifier and hard voting]
+[2024-02-06 11:36:03,193: INFO: prepare_model: Accuracy of VotingClassifier(estimators=[('dt', DecisionTreeClassifier(random_state=42)),
+                             ('rf', RandomForestClassifier(random_state=42)),
+                             ('gb',
+                              GradientBoostingClassifier(random_state=42))]) is 1.0]
+[2024-02-06 11:36:03,209: INFO: prepare_model: Classification report of VotingClassifier(estimators=[('dt', DecisionTreeClassifier(random_state=42)),
+                             ('rf', RandomForestClassifier(random_state=42)),
+                             ('gb',
+                              GradientBoostingClassifier(random_state=42))]) is               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00       100
+           1       1.00      1.00      1.00       105
+
+    accuracy                           1.00       205
+   macro avg       1.00      1.00      1.00       205
+weighted avg       1.00      1.00      1.00       205
+]
+[2024-02-06 11:36:03,209: ERROR: main: [Errno 13] Permission denied: 'artifacts\\prepare_models']
+Traceback (most recent call last):
+  File "C:\Users\Aditya\Documents\Aditya\Hackathons\init_prep\main.py", line 34, in <module>
+    generate_report.main()
+  File "c:\users\aditya\documents\aditya\hackathons\init_prep\src\heartDiseaseClassification\pipeline\stage_03_prepare_model.py", line 16, in main
+    prepare_model_config.prepare_models()
+  File "c:\users\aditya\documents\aditya\hackathons\init_prep\src\heartDiseaseClassification\components\prepare_model.py", line 55, in prepare_models
+    joblib.dump(voting_clf, voting_clf_file_path)
+  File "C:\Users\Aditya\AppData\Local\Programs\Python\Python311\Lib\site-packages\joblib\numpy_pickle.py", line 552, in dump
+    with open(filename, 'wb') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'artifacts\\prepare_models'
+[2024-02-06 11:46:34,868: WARNING: module_wrapper: From C:\Users\Aditya\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+]
+[2024-02-06 11:46:35,162: INFO: main: >>>>> Stage Data Ingestion started <<<<<]
+[2024-02-06 11:46:35,168: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-06 11:46:35,168: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-06 11:46:35,168: INFO: common: created directory at: artifacts]
+[2024-02-06 11:46:35,168: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-02-06 11:46:35,168: INFO: data_ingestion: File already exists of size: ~ 6 KB]
+[2024-02-06 11:46:35,168: INFO: main: >>>>> Stage Data Ingestion completed <<<<<]
+[2024-02-06 11:46:35,168: INFO: main: ********************************************]
+[2024-02-06 11:46:35,168: INFO: main: >>>>> Stage Preprocessing Data started <<<<<]
+[2024-02-06 11:46:35,168: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-06 11:46:35,168: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-06 11:46:35,168: INFO: common: created directory at: artifacts]
+[2024-02-06 11:46:35,168: INFO: common: created directory at: artifacts/preprocessing_data]
+[2024-02-06 11:46:35,199: INFO: preprocessing_data: 
+
+X train shape: (820, 13)]
+[2024-02-06 11:46:35,199: INFO: preprocessing_data: 
+
+X test shape: (205, 13)]
+[2024-02-06 11:46:35,199: INFO: preprocessing_data: 
+
+y train shape: (820,)]
+[2024-02-06 11:46:35,199: INFO: preprocessing_data: 
+
+y test shape: (205,)]
+[2024-02-06 11:46:35,199: INFO: preprocessing_data: Preprocessing completed and saved to artifacts\preprocessing_data]
+[2024-02-06 11:46:35,199: INFO: main: >>>>> Stage Preprocessing Data completed <<<<<]
+[2024-02-06 11:46:35,199: INFO: main: ********************************************]
+[2024-02-06 11:46:35,199: INFO: main: >>>>> Stage Preparing Models started <<<<<]
+[2024-02-06 11:46:35,199: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-06 11:46:35,215: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-06 11:46:35,215: INFO: common: created directory at: artifacts]
+[2024-02-06 11:46:35,215: INFO: common: created directory at: artifacts/prepare_models]
+[2024-02-06 11:46:35,215: INFO: prepare_model: Training model: DecisionTreeClassifier(random_state=42)]
+[2024-02-06 11:46:35,231: INFO: prepare_model: Accuracy of DecisionTreeClassifier(random_state=42) is 0.9853658536585366]
+[2024-02-06 11:46:35,246: INFO: prepare_model: Classification report of DecisionTreeClassifier(random_state=42) is               precision    recall  f1-score   support
+
+           0       0.97      1.00      0.99       100
+           1       1.00      0.97      0.99       105
+
+    accuracy                           0.99       205
+   macro avg       0.99      0.99      0.99       205
+weighted avg       0.99      0.99      0.99       205
+]
+[2024-02-06 11:46:35,252: INFO: prepare_model: Training model: RandomForestClassifier(random_state=42)]
+[2024-02-06 11:46:35,499: INFO: prepare_model: Accuracy of RandomForestClassifier(random_state=42) is 1.0]
+[2024-02-06 11:46:35,499: INFO: prepare_model: Classification report of RandomForestClassifier(random_state=42) is               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00       100
+           1       1.00      1.00      1.00       105
+
+    accuracy                           1.00       205
+   macro avg       1.00      1.00      1.00       205
+weighted avg       1.00      1.00      1.00       205
+]
+[2024-02-06 11:46:35,510: INFO: prepare_model: Training model: GradientBoostingClassifier(random_state=42)]
+[2024-02-06 11:46:35,753: INFO: prepare_model: Accuracy of GradientBoostingClassifier(random_state=42) is 0.975609756097561]
+[2024-02-06 11:46:35,769: INFO: prepare_model: Classification report of GradientBoostingClassifier(random_state=42) is               precision    recall  f1-score   support
+
+           0       0.98      0.97      0.97       100
+           1       0.97      0.98      0.98       105
+
+    accuracy                           0.98       205
+   macro avg       0.98      0.98      0.98       205
+weighted avg       0.98      0.98      0.98       205
+]
+[2024-02-06 11:46:35,769: INFO: prepare_model: Training model: VotingClassifier(estimators=[('dt', DecisionTreeClassifier(random_state=42)),
+                             ('rf', RandomForestClassifier(random_state=42)),
+                             ('gb',
+                              GradientBoostingClassifier(random_state=42))]) using VotingClassifier and hard voting]
+[2024-02-06 11:46:36,306: INFO: prepare_model: Accuracy of VotingClassifier(estimators=[('dt', DecisionTreeClassifier(random_state=42)),
+                             ('rf', RandomForestClassifier(random_state=42)),
+                             ('gb',
+                              GradientBoostingClassifier(random_state=42))]) is 1.0]
+[2024-02-06 11:46:36,322: INFO: prepare_model: Classification report of VotingClassifier(estimators=[('dt', DecisionTreeClassifier(random_state=42)),
+                             ('rf', RandomForestClassifier(random_state=42)),
+                             ('gb',
+                              GradientBoostingClassifier(random_state=42))]) is               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00       100
+           1       1.00      1.00      1.00       105
+
+    accuracy                           1.00       205
+   macro avg       1.00      1.00      1.00       205
+weighted avg       1.00      1.00      1.00       205
+]
+[2024-02-06 11:46:36,355: INFO: main: >>>>> Stage Preparing Models completed <<<<<]

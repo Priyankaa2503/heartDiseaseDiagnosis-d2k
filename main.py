@@ -1,7 +1,7 @@
 from heartDiseaseClassification import logger
 from heartDiseaseClassification.pipeline.stage_01_data_ingestion import DataIngestionTrainingPipeline
 from heartDiseaseClassification.pipeline.stage_02_data_preprocessing import PreprocesingDataPipeline
-from heartDiseaseClassification.pipeline.stage_03_generate_report import GeneratingReportTrainingPipeline
+from heartDiseaseClassification.pipeline.stage_03_prepare_model import PrepareModelsTrainingPipeline
 
 STAGE_NAME = "Data Ingestion"
 try:
@@ -26,14 +26,14 @@ except Exception as e:
     logger.exception(e)
     raise e
 
-# STAGE_NAME = "Generating Report"
-# try:
-#     logger.info(f"********************************************")
-#     logger.info(f">>>>> Stage {STAGE_NAME} started <<<<<")
-#     generate_report = GeneratingReportTrainingPipeline()
-#     generate_report.main()
-#     logger.info(
-#         f">>>>> Stage {STAGE_NAME} completed <<<<<")
-# except Exception as e:
-#     logger.exception(e)
-#     raise e
+STAGE_NAME = "Preparing Models"
+try:
+    logger.info(f"********************************************")
+    logger.info(f">>>>> Stage {STAGE_NAME} started <<<<<")
+    generate_report = PrepareModelsTrainingPipeline()
+    generate_report.main()
+    logger.info(
+        f">>>>> Stage {STAGE_NAME} completed <<<<<")
+except Exception as e:
+    logger.exception(e)
+    raise e

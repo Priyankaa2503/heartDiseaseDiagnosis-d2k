@@ -1,7 +1,7 @@
 from heartDiseaseClassification.constants import *
 from heartDiseaseClassification.utils.common import read_yaml, create_directories
 from heartDiseaseClassification.entity.config_entity import (
-    DataIngestionConfig, PreprocessingDataConfig, GenerateReportConfig)
+    DataIngestionConfig, PreprocessingDataConfig, PrepareModelConfig, GenerateReportConfig)
 
 
 class ConfigurationManager:
@@ -38,6 +38,16 @@ class ConfigurationManager:
             result_data_path=Path(config.result_data_path),
         )
         return preprocessing_data_config
+
+    def get_prepare_model_config(self) -> PrepareModelConfig:
+        config = self.config.prepare_model
+        create_directories([config.root_dir])
+        prepare_model_config = PrepareModelConfig(
+            root_dir=config.root_dir,
+            data_path=config.data_path,
+            model_path=config.model_path
+        )
+        return prepare_model_config
 
     def get_generate_report_config(self) -> GenerateReportConfig:
         config = self.config.generate_report
