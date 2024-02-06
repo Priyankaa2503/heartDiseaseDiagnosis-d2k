@@ -2013,3 +2013,194 @@ weighted avg       0.98      0.98      0.98       205
 weighted avg       1.00      1.00      1.00       205
 ]
 [2024-02-06 11:46:36,355: INFO: main: >>>>> Stage Preparing Models completed <<<<<]
+[2024-02-06 12:01:29,699: WARNING: law_school_gpa_dataset: No module named 'tempeh': LawSchoolGPADataset will be unavailable. To install, run:
+pip install 'aif360[LawSchoolGPA]']
+[2024-02-06 12:01:36,234: WARNING: module_wrapper: From C:\Users\Aditya\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+]
+[2024-02-06 12:01:37,181: WARNING: exponentiated_gradient_reduction: No module named 'fairlearn': ExponentiatedGradientReduction will be unavailable. To install, run:
+pip install 'aif360[Reductions]']
+[2024-02-06 12:01:37,266: WARNING: grid_search_reduction: No module named 'fairlearn': GridSearchReduction will be unavailable. To install, run:
+pip install 'aif360[Reductions]']
+[2024-02-06 12:01:37,281: WARNING: grid_search_reduction: No module named 'fairlearn': GridSearchReduction will be unavailable. To install, run:
+pip install 'aif360[Reductions]']
+[2024-02-06 12:01:37,767: INFO: main: >>>>> Stage Data Ingestion started <<<<<]
+[2024-02-06 12:01:37,787: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-06 12:01:37,797: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-06 12:01:37,799: INFO: common: created directory at: artifacts]
+[2024-02-06 12:01:37,804: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-02-06 12:01:39,396: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 6288
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "8e3dce5021eebbb5401b84be8f841a39a45f6530e03270fac4afa93cfc92a5d7"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 9E10:28B8E6:7FC415:8F6571:65C1AF96
+Accept-Ranges: bytes
+Date: Tue, 06 Feb 2024 06:31:39 GMT
+Via: 1.1 varnish
+X-Served-By: cache-bom4723-BOM
+X-Cache: HIT
+X-Cache-Hits: 1
+X-Timer: S1707201099.073430,VS0,VE336
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 5a84a4ff34937e2e0b49aadda484d592012e2d6d
+Expires: Tue, 06 Feb 2024 06:36:39 GMT
+Source-Age: 0
+
+]
+[2024-02-06 12:01:39,507: INFO: main: >>>>> Stage Data Ingestion completed <<<<<]
+[2024-02-06 12:01:39,517: INFO: main: ********************************************]
+[2024-02-06 12:01:39,533: INFO: main: >>>>> Stage Preprocessing Data started <<<<<]
+[2024-02-06 12:01:39,537: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-06 12:01:39,696: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-06 12:01:39,696: INFO: common: created directory at: artifacts]
+[2024-02-06 12:01:39,696: INFO: common: created directory at: artifacts/preprocessing_data]
+[2024-02-06 12:01:39,725: ERROR: main: 'numpy.ndarray' object has no attribute 'to_csv']
+Traceback (most recent call last):
+  File "C:\Users\Aditya\Documents\Aditya\Hackathons\init_prep\main.py", line 22, in <module>
+    preprocessing_data.main()
+  File "c:\users\aditya\documents\aditya\hackathons\init_prep\src\heartDiseaseClassification\pipeline\stage_02_data_preprocessing.py", line 17, in main
+    preprocess_data.preprocess_data()
+  File "c:\users\aditya\documents\aditya\hackathons\init_prep\src\heartDiseaseClassification\components\preprocessing_data.py", line 76, in preprocess_data
+    X_train.to_csv(
+    ^^^^^^^^^^^^^^
+AttributeError: 'numpy.ndarray' object has no attribute 'to_csv'
+[2024-02-06 12:03:05,156: WARNING: law_school_gpa_dataset: No module named 'tempeh': LawSchoolGPADataset will be unavailable. To install, run:
+pip install 'aif360[LawSchoolGPA]']
+[2024-02-06 12:03:11,897: WARNING: module_wrapper: From C:\Users\Aditya\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+]
+[2024-02-06 12:03:12,576: WARNING: exponentiated_gradient_reduction: No module named 'fairlearn': ExponentiatedGradientReduction will be unavailable. To install, run:
+pip install 'aif360[Reductions]']
+[2024-02-06 12:03:12,576: WARNING: grid_search_reduction: No module named 'fairlearn': GridSearchReduction will be unavailable. To install, run:
+pip install 'aif360[Reductions]']
+[2024-02-06 12:03:12,576: WARNING: grid_search_reduction: No module named 'fairlearn': GridSearchReduction will be unavailable. To install, run:
+pip install 'aif360[Reductions]']
+[2024-02-06 12:03:12,666: INFO: main: >>>>> Stage Data Ingestion started <<<<<]
+[2024-02-06 12:03:12,666: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-06 12:03:12,666: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-06 12:03:12,666: INFO: common: created directory at: artifacts]
+[2024-02-06 12:03:12,666: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-02-06 12:03:13,586: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 6288
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "8e3dce5021eebbb5401b84be8f841a39a45f6530e03270fac4afa93cfc92a5d7"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 9E10:28B8E6:7FC415:8F6571:65C1AF96
+Accept-Ranges: bytes
+Date: Tue, 06 Feb 2024 06:33:13 GMT
+Via: 1.1 varnish
+X-Served-By: cache-bom4741-BOM
+X-Cache: HIT
+X-Cache-Hits: 1
+X-Timer: S1707201194.664694,VS0,VE1
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 9be7ab60f288eed6a0b3fb549eacfb0e07ef518e
+Expires: Tue, 06 Feb 2024 06:38:13 GMT
+Source-Age: 94
+
+]
+[2024-02-06 12:03:13,586: INFO: main: >>>>> Stage Data Ingestion completed <<<<<]
+[2024-02-06 12:03:13,586: INFO: main: ********************************************]
+[2024-02-06 12:03:13,590: INFO: main: >>>>> Stage Preprocessing Data started <<<<<]
+[2024-02-06 12:03:13,595: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-06 12:03:13,598: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-06 12:03:13,598: INFO: common: created directory at: artifacts]
+[2024-02-06 12:03:13,598: INFO: common: created directory at: artifacts/preprocessing_data]
+[2024-02-06 12:03:13,655: INFO: preprocessing_data: 
+
+X train shape: (820, 14)]
+[2024-02-06 12:03:13,655: INFO: preprocessing_data: 
+
+X test shape: (205, 14)]
+[2024-02-06 12:03:13,655: INFO: preprocessing_data: 
+
+y train shape: (820, 1)]
+[2024-02-06 12:03:13,655: INFO: preprocessing_data: 
+
+y test shape: (205, 1)]
+[2024-02-06 12:03:13,655: INFO: preprocessing_data: Preprocessing completed and saved to artifacts\preprocessing_data]
+[2024-02-06 12:03:13,655: INFO: main: >>>>> Stage Preprocessing Data completed <<<<<]
+[2024-02-06 12:03:13,655: INFO: main: ********************************************]
+[2024-02-06 12:03:13,655: INFO: main: >>>>> Stage Preparing Models started <<<<<]
+[2024-02-06 12:03:13,656: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-06 12:03:13,656: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-06 12:03:13,664: INFO: common: created directory at: artifacts]
+[2024-02-06 12:03:13,678: INFO: common: created directory at: artifacts/prepare_models]
+[2024-02-06 12:03:13,687: INFO: prepare_model: Training model: DecisionTreeClassifier(max_depth=5, min_samples_split=10)]
+[2024-02-06 12:03:13,705: INFO: prepare_model: Accuracy of DecisionTreeClassifier(max_depth=5, min_samples_split=10) is 0.8975609756097561]
+[2024-02-06 12:03:13,716: INFO: prepare_model: Classification report of DecisionTreeClassifier(max_depth=5, min_samples_split=10) is               precision    recall  f1-score   support
+
+         0.0       0.94      0.84      0.89        98
+         1.0       0.86      0.95      0.91       107
+
+    accuracy                           0.90       205
+   macro avg       0.90      0.90      0.90       205
+weighted avg       0.90      0.90      0.90       205
+]
+[2024-02-06 12:03:13,716: INFO: prepare_model: Training model: RandomForestClassifier(max_depth=5)]
+[2024-02-06 12:03:13,946: INFO: prepare_model: Accuracy of RandomForestClassifier(max_depth=5) is 0.9414634146341463]
+[2024-02-06 12:03:13,956: INFO: prepare_model: Classification report of RandomForestClassifier(max_depth=5) is               precision    recall  f1-score   support
+
+         0.0       0.98      0.90      0.94        98
+         1.0       0.91      0.98      0.95       107
+
+    accuracy                           0.94       205
+   macro avg       0.95      0.94      0.94       205
+weighted avg       0.94      0.94      0.94       205
+]
+[2024-02-06 12:03:13,956: INFO: prepare_model: Training model: GradientBoostingClassifier()]
+[2024-02-06 12:03:14,316: INFO: prepare_model: Accuracy of GradientBoostingClassifier() is 0.9902439024390244]
+[2024-02-06 12:03:14,323: INFO: prepare_model: Classification report of GradientBoostingClassifier() is               precision    recall  f1-score   support
+
+         0.0       1.00      0.98      0.99        98
+         1.0       0.98      1.00      0.99       107
+
+    accuracy                           0.99       205
+   macro avg       0.99      0.99      0.99       205
+weighted avg       0.99      0.99      0.99       205
+]
+[2024-02-06 12:03:14,326: INFO: prepare_model: Training model: VotingClassifier(estimators=[('decision_tree',
+                              DecisionTreeClassifier(max_depth=5,
+                                                     min_samples_split=10)),
+                             ('random_forest',
+                              RandomForestClassifier(max_depth=5)),
+                             ('gradient_boosting',
+                              GradientBoostingClassifier())]) using VotingClassifier and hard voting]
+[2024-02-06 12:03:14,811: INFO: prepare_model: Accuracy of VotingClassifier(estimators=[('decision_tree',
+                              DecisionTreeClassifier(max_depth=5,
+                                                     min_samples_split=10)),
+                             ('random_forest',
+                              RandomForestClassifier(max_depth=5)),
+                             ('gradient_boosting',
+                              GradientBoostingClassifier())]) is 0.9560975609756097]
+[2024-02-06 12:03:14,817: INFO: prepare_model: Classification report of VotingClassifier(estimators=[('decision_tree',
+                              DecisionTreeClassifier(max_depth=5,
+                                                     min_samples_split=10)),
+                             ('random_forest',
+                              RandomForestClassifier(max_depth=5)),
+                             ('gradient_boosting',
+                              GradientBoostingClassifier())]) is               precision    recall  f1-score   support
+
+         0.0       0.97      0.94      0.95        98
+         1.0       0.95      0.97      0.96       107
+
+    accuracy                           0.96       205
+   macro avg       0.96      0.96      0.96       205
+weighted avg       0.96      0.96      0.96       205
+]
+[2024-02-06 12:03:14,837: INFO: main: >>>>> Stage Preparing Models completed <<<<<]

@@ -24,11 +24,16 @@ class PrepareModel:
         y_train = pd.read_csv(f"{data_path}/y_train.csv")
         y_test = pd.read_csv(f"{data_path}/y_test.csv")
 
-        dt = DecisionTreeClassifier(random_state=42)
-        rf = RandomForestClassifier(random_state=42)
-        gb = GradientBoostingClassifier(random_state=42)
+        decision_tree_model = DecisionTreeClassifier(
+            max_depth=5, min_samples_split=10)
+        random_forest_model = RandomForestClassifier(
+            n_estimators=100, max_depth=5)
+        gradient_boosting_model = GradientBoostingClassifier(
+            n_estimators=100, learning_rate=0.1
+        )
 
-        models = [dt, rf, gb]
+        models = [decision_tree_model,
+                  random_forest_model, gradient_boosting_model]
 
         for model in models:
             logger.info(f"Training model: {model}")
@@ -40,7 +45,12 @@ class PrepareModel:
                 f"Classification report of {model} is {classification_report(y_test, y_pred)}")
 
         voting_clf = VotingClassifier(
-            estimators=[('dt', dt), ('rf', rf), ('gb', gb)], voting='hard'
+            estimators=[
+                ("decision_tree", decision_tree_model),
+                ("random_forest", random_forest_model),
+                ("gradient_boosting", gradient_boosting_model),
+            ],
+            voting="hard",
         )
 
         logger.info(
