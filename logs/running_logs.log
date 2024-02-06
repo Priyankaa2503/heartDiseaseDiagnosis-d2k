@@ -2939,3 +2939,117 @@ weighted avg       0.99      0.99      0.99       205
 weighted avg       0.95      0.95      0.95       205
 ]
 [2024-02-06 13:40:52,326: INFO: stage_03_prepare_model: >>>>> Stage Preparing Models completed <<<<<]
+[2024-02-06 15:40:30,145: WARNING: law_school_gpa_dataset: No module named 'tempeh': LawSchoolGPADataset will be unavailable. To install, run:
+pip install 'aif360[LawSchoolGPA]']
+[2024-02-06 15:40:30,158: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.206.221:8000]
+[2024-02-06 15:40:30,158: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-02-06 15:40:34,722: INFO: _internal: 127.0.0.1 - - [06/Feb/2024 15:40:34] "POST /predict HTTP/1.1" 200 -]
+[2024-02-06 15:40:45,081: WARNING: law_school_gpa_dataset: No module named 'tempeh': LawSchoolGPADataset will be unavailable. To install, run:
+pip install 'aif360[LawSchoolGPA]']
+[2024-02-06 15:40:50,035: WARNING: module_wrapper: From C:\Users\Aditya\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+]
+[2024-02-06 15:40:50,497: WARNING: exponentiated_gradient_reduction: No module named 'fairlearn': ExponentiatedGradientReduction will be unavailable. To install, run:
+pip install 'aif360[Reductions]']
+[2024-02-06 15:40:50,499: WARNING: grid_search_reduction: No module named 'fairlearn': GridSearchReduction will be unavailable. To install, run:
+pip install 'aif360[Reductions]']
+[2024-02-06 15:40:50,500: WARNING: grid_search_reduction: No module named 'fairlearn': GridSearchReduction will be unavailable. To install, run:
+pip install 'aif360[Reductions]']
+[2024-02-06 15:40:50,595: INFO: main: >>>>> Stage Data Ingestion started <<<<<]
+[2024-02-06 15:40:50,596: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-06 15:40:50,597: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-06 15:40:50,597: INFO: common: created directory at: artifacts]
+[2024-02-06 15:40:50,597: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-02-06 15:40:50,598: INFO: data_ingestion: File already exists of size: ~ 6 KB]
+[2024-02-06 15:40:50,601: INFO: main: >>>>> Stage Data Ingestion completed <<<<<]
+[2024-02-06 15:40:50,601: INFO: main: ********************************************]
+[2024-02-06 15:40:50,601: INFO: main: >>>>> Stage Preprocessing Data started <<<<<]
+[2024-02-06 15:40:50,603: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-06 15:40:50,604: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-06 15:40:50,604: INFO: common: created directory at: artifacts]
+[2024-02-06 15:40:50,604: INFO: common: created directory at: artifacts/preprocessing_data]
+[2024-02-06 15:40:50,647: INFO: preprocessing_data: 
+
+X train shape: (820, 14)]
+[2024-02-06 15:40:50,647: INFO: preprocessing_data: 
+
+X test shape: (205, 14)]
+[2024-02-06 15:40:50,648: INFO: preprocessing_data: 
+
+y train shape: (820, 1)]
+[2024-02-06 15:40:50,648: INFO: preprocessing_data: 
+
+y test shape: (205, 1)]
+[2024-02-06 15:40:50,648: INFO: preprocessing_data: Preprocessing completed and saved : artifacts\preprocessing_data]
+[2024-02-06 15:40:50,648: INFO: main: >>>>> Stage Preprocessing Data completed <<<<<]
+[2024-02-06 15:40:50,648: INFO: main: ********************************************]
+[2024-02-06 15:40:50,648: INFO: main: >>>>> Stage Preparing Models started <<<<<]
+[2024-02-06 15:40:50,649: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-02-06 15:40:50,650: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-02-06 15:40:50,650: INFO: common: created directory at: artifacts]
+[2024-02-06 15:40:50,650: INFO: common: created directory at: artifacts/prepare_models]
+[2024-02-06 15:40:50,656: INFO: prepare_model: Training model: DecisionTreeClassifier(max_depth=5, min_samples_split=10)]
+[2024-02-06 15:40:50,665: INFO: prepare_model: Accuracy of DecisionTreeClassifier(max_depth=5, min_samples_split=10) is 0.8975609756097561]
+[2024-02-06 15:40:50,669: INFO: prepare_model: Classification report of DecisionTreeClassifier(max_depth=5, min_samples_split=10) is               precision    recall  f1-score   support
+
+         0.0       0.94      0.84      0.89        98
+         1.0       0.86      0.95      0.91       107
+
+    accuracy                           0.90       205
+   macro avg       0.90      0.90      0.90       205
+weighted avg       0.90      0.90      0.90       205
+]
+[2024-02-06 15:40:50,675: INFO: prepare_model: Training model: RandomForestClassifier(max_depth=5)]
+[2024-02-06 15:40:50,771: INFO: prepare_model: Accuracy of RandomForestClassifier(max_depth=5) is 0.9560975609756097]
+[2024-02-06 15:40:50,775: INFO: prepare_model: Classification report of RandomForestClassifier(max_depth=5) is               precision    recall  f1-score   support
+
+         0.0       0.98      0.93      0.95        98
+         1.0       0.94      0.98      0.96       107
+
+    accuracy                           0.96       205
+   macro avg       0.96      0.95      0.96       205
+weighted avg       0.96      0.96      0.96       205
+]
+[2024-02-06 15:40:50,779: INFO: prepare_model: Training model: GradientBoostingClassifier()]
+[2024-02-06 15:40:50,902: INFO: prepare_model: Accuracy of GradientBoostingClassifier() is 0.9902439024390244]
+[2024-02-06 15:40:50,907: INFO: prepare_model: Classification report of GradientBoostingClassifier() is               precision    recall  f1-score   support
+
+         0.0       1.00      0.98      0.99        98
+         1.0       0.98      1.00      0.99       107
+
+    accuracy                           0.99       205
+   macro avg       0.99      0.99      0.99       205
+weighted avg       0.99      0.99      0.99       205
+]
+[2024-02-06 15:40:50,913: INFO: prepare_model: Training model: VotingClassifier(estimators=[('decision_tree',
+                              DecisionTreeClassifier(max_depth=5,
+                                                     min_samples_split=10)),
+                             ('random_forest',
+                              RandomForestClassifier(max_depth=5)),
+                             ('gradient_boosting',
+                              GradientBoostingClassifier())]) using VotingClassifier and hard voting]
+[2024-02-06 15:40:51,139: INFO: prepare_model: Accuracy of VotingClassifier(estimators=[('decision_tree',
+                              DecisionTreeClassifier(max_depth=5,
+                                                     min_samples_split=10)),
+                             ('random_forest',
+                              RandomForestClassifier(max_depth=5)),
+                             ('gradient_boosting',
+                              GradientBoostingClassifier())]) is 0.9512195121951219]
+[2024-02-06 15:40:51,144: INFO: prepare_model: Classification report of VotingClassifier(estimators=[('decision_tree',
+                              DecisionTreeClassifier(max_depth=5,
+                                                     min_samples_split=10)),
+                             ('random_forest',
+                              RandomForestClassifier(max_depth=5)),
+                             ('gradient_boosting',
+                              GradientBoostingClassifier())]) is               precision    recall  f1-score   support
+
+         0.0       0.98      0.92      0.95        98
+         1.0       0.93      0.98      0.95       107
+
+    accuracy                           0.95       205
+   macro avg       0.95      0.95      0.95       205
+weighted avg       0.95      0.95      0.95       205
+]
+[2024-02-06 15:40:51,156: INFO: main: >>>>> Stage Preparing Models completed <<<<<]

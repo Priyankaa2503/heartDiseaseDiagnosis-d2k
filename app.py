@@ -49,7 +49,7 @@ def preprocess(data):
 @cross_origin()
 def predictRoute():
     try:
-        data = request.json
+        data = request.json['data']
         data = preprocess(data)
         c1App.data = data
         result = c1App.classifier.predict()
