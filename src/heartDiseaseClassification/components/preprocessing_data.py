@@ -92,4 +92,4 @@ class PreprocessingData:
         logger.info(f"\n\ny train shape: {y_train.shape}")
         logger.info(f"\n\ny test shape: {y_test.shape}")
         logger.info(
-            f"Preprocessing completed and saved to {self.config.result_data_path}")
+            f"Preprocessing completed and saved : {self.config.result_data_path}")
