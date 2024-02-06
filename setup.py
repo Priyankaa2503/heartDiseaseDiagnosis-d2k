@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as f:
 
 __version__ = "0.0.0"
 
-REPO_NAME = "init_prep"
+REPO_NAME = "caffieneCoders-d2k"
 AUTHOR_USER_NAME = "AdityaSurve"
 SRC_REPO = "heartDiseaseClassification"
 AUTHOR_EMAIL = "surveaditya521@gmail.com"
