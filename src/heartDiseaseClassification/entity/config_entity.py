@@ -11,13 +11,10 @@ class DataIngestionConfig:
 
 
 @dataclass(frozen=True)
-class PrepareBaseModelConfig:
+class PreprocessingDataConfig:
     root_dir: Path
-    base_model_path: Path
-    updated_base_model_path: Path
-    params_test_size: float
-    params_random_state: int
-    params_probability: bool
+    data_path: Path
+    result_data_path: Path
 
 
 @dataclass(frozen=True)

@@ -1,27 +1,27 @@
 from heartDiseaseClassification.config.configuration import ConfigurationManager
-from heartDiseaseClassification.components.prepare_base_model import PrepareBaseModel
+from heartDiseaseClassification.components.preprocessing_data import PreprocessingData
 from heartDiseaseClassification import logger
 
-STAGE_NAME = "Prepare Base Model"
+STAGE_NAME = "Preprocessing Data"
 
 
-class PrepareBaseModelTrainingPipeline:
+class PreprocesingDataPipeline:
     def __init__(self):
         pass
 
     def main(self):
         config = ConfigurationManager()
-        prepare_base_model_config = config.get_prepare_base_model_config()
-        prepare_base_model = PrepareBaseModel(config=prepare_base_model_config)
-        prepare_base_model.get_base_model()
-        prepare_base_model.update_base_model()
+        preprocessing_data_config = config.get_preprocessing_data_config()
+        preprocess_data = PreprocessingData(
+            config=preprocessing_data_config)
+        preprocess_data.preprocess_data()
 
 
 if __name__ == "__main__":
     try:
         logger.info(f"********************************************")
         logger.info(f">>>>> Stage {STAGE_NAME} started <<<<<")
-        obj = PrepareBaseModelTrainingPipeline()
+        obj = PreprocesingDataPipeline()
         obj.main()
         logger.info(
             f">>>>> Stage {STAGE_NAME} completed <<<<<")

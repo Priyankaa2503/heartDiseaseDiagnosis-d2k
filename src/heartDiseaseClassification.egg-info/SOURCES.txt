@@ -7,12 +7,17 @@ src/heartDiseaseClassification.egg-info/dependency_links.txt
 src/heartDiseaseClassification.egg-info/top_level.txt
 src/heartDiseaseClassification/components/__init__.py
 src/heartDiseaseClassification/components/data_ingestion.py
+src/heartDiseaseClassification/components/generate_report.py
+src/heartDiseaseClassification/components/preprocessing_data.py
 src/heartDiseaseClassification/config/__init__.py
 src/heartDiseaseClassification/config/configuration.py
 src/heartDiseaseClassification/constants/__init__.py
 src/heartDiseaseClassification/entity/__init__.py
 src/heartDiseaseClassification/entity/config_entity.py
 src/heartDiseaseClassification/pipeline/__init__.py
+src/heartDiseaseClassification/pipeline/prediction.py
 src/heartDiseaseClassification/pipeline/stage_01_data_ingestion.py
+src/heartDiseaseClassification/pipeline/stage_02_data_preprocessing.py
+src/heartDiseaseClassification/pipeline/stage_03_generate_report.py
 src/heartDiseaseClassification/utils/__init__.py
 src/heartDiseaseClassification/utils/common.py
