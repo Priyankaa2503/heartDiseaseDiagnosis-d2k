@@ -3053,3 +3053,7 @@ weighted avg       0.99      0.99      0.99       205
 weighted avg       0.95      0.95      0.95       205
 ]
 [2024-02-06 15:40:51,156: INFO: main: >>>>> Stage Preparing Models completed <<<<<]
+[2024-02-06 15:40:51,877: INFO: _internal: 127.0.0.1 - - [06/Feb/2024 15:40:51] "POST /train HTTP/1.1" 200 -]
+[2024-02-06 15:41:00,026: INFO: _internal: 127.0.0.1 - - [06/Feb/2024 15:41:00] "POST /predict HTTP/1.1" 200 -]
+[2024-02-06 15:41:15,961: INFO: _internal: 127.0.0.1 - - [06/Feb/2024 15:41:15] "POST /predict HTTP/1.1" 200 -]
+[2024-02-06 15:42:06,752: INFO: _internal: 127.0.0.1 - - [06/Feb/2024 15:42:06] "POST /predict HTTP/1.1" 200 -]
