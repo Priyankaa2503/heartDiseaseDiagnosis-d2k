@@ -22,12 +22,8 @@ class PreprocessingData:
         print(data.head(3))
 
         age_threshold = data["age"].median()
-        unprivileged_groups = [
-            {"sex": 0, "age_binary": 0},
-            {"sex": 0, "age_binary": 1},
-            {"sex": 1, "age_binary": 0},
-        ]
-        privileged_groups = [{"sex": 1, "age_binary": 1}]
+        unprivileged_groups = [{"sex": 0}]
+        privileged_groups = [{"sex": 1}]
         target_variable = "target"
 
         data["age_binary"] = np.where(data["age"] > age_threshold, 1, 0)
