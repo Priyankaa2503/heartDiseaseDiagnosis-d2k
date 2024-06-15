@@ -1,3 +1,7 @@
+import sys
+
+sys.path.insert(0, "./src")
+
 from heartDiseaseClassification import logger
 from heartDiseaseClassification.pipeline.stage_01_data_ingestion import DataIngestionTrainingPipeline
 from heartDiseaseClassification.pipeline.stage_02_data_preprocessing import PreprocesingDataPipeline

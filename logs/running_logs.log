@@ -3165,3 +3165,410 @@ weighted avg       0.95      0.95      0.95       205
 ]
 [2024-02-06 15:53:00,326: INFO: main: >>>>> Stage Preparing Models completed <<<<<]
 [2024-02-06 15:53:00,932: INFO: _internal: 127.0.0.1 - - [06/Feb/2024 15:53:00] "POST /train HTTP/1.1" 200 -]
+[2024-06-15 22:03:44,882: WARNING: law_school_gpa_dataset: No module named 'tempeh': LawSchoolGPADataset will be unavailable. To install, run:
+pip install 'aif360[LawSchoolGPA]']
+[2024-06-15 22:04:06,382: WARNING: exponentiated_gradient_reduction: No module named 'fairlearn': ExponentiatedGradientReduction will be unavailable. To install, run:
+pip install 'aif360[Reductions]']
+[2024-06-15 22:04:06,383: WARNING: grid_search_reduction: No module named 'fairlearn': GridSearchReduction will be unavailable. To install, run:
+pip install 'aif360[Reductions]']
+[2024-06-15 22:04:06,383: WARNING: grid_search_reduction: No module named 'fairlearn': GridSearchReduction will be unavailable. To install, run:
+pip install 'aif360[Reductions]']
+[2024-06-15 22:04:06,582: INFO: main: >>>>> Stage Data Ingestion started <<<<<]
+[2024-06-15 22:04:06,584: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-06-15 22:04:06,586: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-06-15 22:04:06,586: INFO: common: created directory at: artifacts]
+[2024-06-15 22:04:06,586: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-06-15 22:04:06,683: ERROR: main: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1006)>]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/urllib/request.py", line 1348, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/http/client.py", line 1286, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/http/client.py", line 1332, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/http/client.py", line 1281, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/http/client.py", line 1041, in _send_output
+    self.send(msg)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/http/client.py", line 979, in send
+    self.connect()
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/http/client.py", line 1458, in connect
+    self.sock = self._context.wrap_socket(self.sock,
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/ssl.py", line 517, in wrap_socket
+    return self.sslsocket_class._create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/ssl.py", line 1108, in _create
+    self.do_handshake()
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/ssl.py", line 1379, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1006)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/priyankaramachandran/Desktop/d2k/main.py", line 14, in <module>
+    data_ingesetion.main()
+  File "/Users/priyankaramachandran/Desktop/d2k/./src/heartDiseaseClassification/pipeline/stage_01_data_ingestion.py", line 16, in main
+    data_ingestion.download_file()
+  File "/Users/priyankaramachandran/Desktop/d2k/./src/heartDiseaseClassification/components/data_ingestion.py", line 16, in download_file
+    filename, headers = request.urlretrieve(
+                        ^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/urllib/request.py", line 241, in urlretrieve
+    with contextlib.closing(urlopen(url, data)) as fp:
+                            ^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/urllib/request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/urllib/request.py", line 519, in open
+    response = self._open(req, data)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/urllib/request.py", line 536, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/urllib/request.py", line 496, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/urllib/request.py", line 1391, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/urllib/request.py", line 1351, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1006)>
+[2024-06-15 22:07:33,374: WARNING: law_school_gpa_dataset: No module named 'tempeh': LawSchoolGPADataset will be unavailable. To install, run:
+pip install 'aif360[LawSchoolGPA]']
+[2024-06-15 22:07:37,977: WARNING: exponentiated_gradient_reduction: No module named 'fairlearn': ExponentiatedGradientReduction will be unavailable. To install, run:
+pip install 'aif360[Reductions]']
+[2024-06-15 22:07:37,978: WARNING: grid_search_reduction: No module named 'fairlearn': GridSearchReduction will be unavailable. To install, run:
+pip install 'aif360[Reductions]']
+[2024-06-15 22:07:37,978: WARNING: grid_search_reduction: No module named 'fairlearn': GridSearchReduction will be unavailable. To install, run:
+pip install 'aif360[Reductions]']
+[2024-06-15 22:07:38,105: INFO: main: >>>>> Stage Data Ingestion started <<<<<]
+[2024-06-15 22:07:38,107: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-06-15 22:07:38,108: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-06-15 22:07:38,108: INFO: common: created directory at: artifacts]
+[2024-06-15 22:07:38,109: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-06-15 22:07:38,177: ERROR: main: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1006)>]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/urllib/request.py", line 1348, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/http/client.py", line 1286, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/http/client.py", line 1332, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/http/client.py", line 1281, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/http/client.py", line 1041, in _send_output
+    self.send(msg)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/http/client.py", line 979, in send
+    self.connect()
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/http/client.py", line 1458, in connect
+    self.sock = self._context.wrap_socket(self.sock,
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/ssl.py", line 517, in wrap_socket
+    return self.sslsocket_class._create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/ssl.py", line 1108, in _create
+    self.do_handshake()
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/ssl.py", line 1379, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1006)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/priyankaramachandran/Desktop/d2k/main.py", line 14, in <module>
+    data_ingesetion.main()
+  File "/Users/priyankaramachandran/Desktop/d2k/./src/heartDiseaseClassification/pipeline/stage_01_data_ingestion.py", line 16, in main
+    data_ingestion.download_file()
+  File "/Users/priyankaramachandran/Desktop/d2k/./src/heartDiseaseClassification/components/data_ingestion.py", line 16, in download_file
+    filename, headers = request.urlretrieve(
+                        ^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/urllib/request.py", line 241, in urlretrieve
+    with contextlib.closing(urlopen(url, data)) as fp:
+                            ^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/urllib/request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/urllib/request.py", line 519, in open
+    response = self._open(req, data)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/urllib/request.py", line 536, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/urllib/request.py", line 496, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/urllib/request.py", line 1391, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/urllib/request.py", line 1351, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1006)>
+[2024-06-15 22:10:01,872: WARNING: law_school_gpa_dataset: No module named 'tempeh': LawSchoolGPADataset will be unavailable. To install, run:
+pip install 'aif360[LawSchoolGPA]']
+[2024-06-15 22:10:06,442: WARNING: exponentiated_gradient_reduction: No module named 'fairlearn': ExponentiatedGradientReduction will be unavailable. To install, run:
+pip install 'aif360[Reductions]']
+[2024-06-15 22:10:06,443: WARNING: grid_search_reduction: No module named 'fairlearn': GridSearchReduction will be unavailable. To install, run:
+pip install 'aif360[Reductions]']
+[2024-06-15 22:10:06,443: WARNING: grid_search_reduction: No module named 'fairlearn': GridSearchReduction will be unavailable. To install, run:
+pip install 'aif360[Reductions]']
+[2024-06-15 22:10:06,549: INFO: main: >>>>> Stage Data Ingestion started <<<<<]
+[2024-06-15 22:10:06,550: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-06-15 22:10:06,551: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-06-15 22:10:06,551: INFO: common: created directory at: artifacts]
+[2024-06-15 22:10:06,551: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-06-15 22:10:06,621: ERROR: main: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1006)>]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/urllib/request.py", line 1348, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/http/client.py", line 1286, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/http/client.py", line 1332, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/http/client.py", line 1281, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/http/client.py", line 1041, in _send_output
+    self.send(msg)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/http/client.py", line 979, in send
+    self.connect()
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/http/client.py", line 1458, in connect
+    self.sock = self._context.wrap_socket(self.sock,
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/ssl.py", line 517, in wrap_socket
+    return self.sslsocket_class._create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/ssl.py", line 1108, in _create
+    self.do_handshake()
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/ssl.py", line 1379, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1006)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/priyankaramachandran/Desktop/d2k/main.py", line 14, in <module>
+    data_ingesetion.main()
+  File "/Users/priyankaramachandran/Desktop/d2k/./src/heartDiseaseClassification/pipeline/stage_01_data_ingestion.py", line 16, in main
+    data_ingestion.download_file()
+  File "/Users/priyankaramachandran/Desktop/d2k/./src/heartDiseaseClassification/components/data_ingestion.py", line 16, in download_file
+    filename, headers = request.urlretrieve(
+                        ^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/urllib/request.py", line 241, in urlretrieve
+    with contextlib.closing(urlopen(url, data)) as fp:
+                            ^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/urllib/request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/urllib/request.py", line 519, in open
+    response = self._open(req, data)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/urllib/request.py", line 536, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/urllib/request.py", line 496, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/urllib/request.py", line 1391, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/urllib/request.py", line 1351, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1006)>
+[2024-06-15 22:14:05,198: WARNING: law_school_gpa_dataset: No module named 'tempeh': LawSchoolGPADataset will be unavailable. To install, run:
+pip install 'aif360[LawSchoolGPA]']
+[2024-06-15 22:14:09,990: WARNING: exponentiated_gradient_reduction: No module named 'fairlearn': ExponentiatedGradientReduction will be unavailable. To install, run:
+pip install 'aif360[Reductions]']
+[2024-06-15 22:14:09,991: WARNING: grid_search_reduction: No module named 'fairlearn': GridSearchReduction will be unavailable. To install, run:
+pip install 'aif360[Reductions]']
+[2024-06-15 22:14:09,992: WARNING: grid_search_reduction: No module named 'fairlearn': GridSearchReduction will be unavailable. To install, run:
+pip install 'aif360[Reductions]']
+[2024-06-15 22:14:10,095: INFO: main: >>>>> Stage Data Ingestion started <<<<<]
+[2024-06-15 22:14:10,097: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-06-15 22:14:10,099: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-06-15 22:14:10,099: INFO: common: created directory at: artifacts]
+[2024-06-15 22:14:10,099: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-06-15 22:14:10,154: ERROR: main: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1006)>]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/urllib/request.py", line 1348, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/http/client.py", line 1286, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/http/client.py", line 1332, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/http/client.py", line 1281, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/http/client.py", line 1041, in _send_output
+    self.send(msg)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/http/client.py", line 979, in send
+    self.connect()
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/http/client.py", line 1458, in connect
+    self.sock = self._context.wrap_socket(self.sock,
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/ssl.py", line 517, in wrap_socket
+    return self.sslsocket_class._create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/ssl.py", line 1108, in _create
+    self.do_handshake()
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/ssl.py", line 1379, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1006)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/priyankaramachandran/Desktop/d2k/main.py", line 14, in <module>
+    data_ingesetion.main()
+  File "/Users/priyankaramachandran/Desktop/d2k/./src/heartDiseaseClassification/pipeline/stage_01_data_ingestion.py", line 16, in main
+    data_ingestion.download_file()
+  File "/Users/priyankaramachandran/Desktop/d2k/./src/heartDiseaseClassification/components/data_ingestion.py", line 16, in download_file
+    filename, headers = request.urlretrieve(
+                        ^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/urllib/request.py", line 241, in urlretrieve
+    with contextlib.closing(urlopen(url, data)) as fp:
+                            ^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/urllib/request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/urllib/request.py", line 519, in open
+    response = self._open(req, data)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/urllib/request.py", line 536, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/urllib/request.py", line 496, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/urllib/request.py", line 1391, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/urllib/request.py", line 1351, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1006)>
+[2024-06-15 22:17:11,525: WARNING: law_school_gpa_dataset: No module named 'tempeh': LawSchoolGPADataset will be unavailable. To install, run:
+pip install 'aif360[LawSchoolGPA]']
+[2024-06-15 22:17:16,092: WARNING: exponentiated_gradient_reduction: No module named 'fairlearn': ExponentiatedGradientReduction will be unavailable. To install, run:
+pip install 'aif360[Reductions]']
+[2024-06-15 22:17:16,093: WARNING: grid_search_reduction: No module named 'fairlearn': GridSearchReduction will be unavailable. To install, run:
+pip install 'aif360[Reductions]']
+[2024-06-15 22:17:16,093: WARNING: grid_search_reduction: No module named 'fairlearn': GridSearchReduction will be unavailable. To install, run:
+pip install 'aif360[Reductions]']
+[2024-06-15 22:17:16,190: INFO: main: >>>>> Stage Data Ingestion started <<<<<]
+[2024-06-15 22:17:16,192: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-06-15 22:17:16,194: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-06-15 22:17:16,194: INFO: common: created directory at: artifacts]
+[2024-06-15 22:17:16,194: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-06-15 22:17:16,195: ERROR: main: urlretrieve() got an unexpected keyword argument 'context']
+Traceback (most recent call last):
+  File "/Users/priyankaramachandran/Desktop/d2k/main.py", line 14, in <module>
+    data_ingesetion.main()
+  File "/Users/priyankaramachandran/Desktop/d2k/./src/heartDiseaseClassification/pipeline/stage_01_data_ingestion.py", line 16, in main
+    data_ingestion.download_file()
+  File "/Users/priyankaramachandran/Desktop/d2k/./src/heartDiseaseClassification/components/data_ingestion.py", line 21, in download_file
+    filename, headers = request.urlretrieve(
+                        ^^^^^^^^^^^^^^^^^^^^
+TypeError: urlretrieve() got an unexpected keyword argument 'context'
+[2024-06-15 22:18:17,494: WARNING: law_school_gpa_dataset: No module named 'tempeh': LawSchoolGPADataset will be unavailable. To install, run:
+pip install 'aif360[LawSchoolGPA]']
+[2024-06-15 22:18:21,593: WARNING: exponentiated_gradient_reduction: No module named 'fairlearn': ExponentiatedGradientReduction will be unavailable. To install, run:
+pip install 'aif360[Reductions]']
+[2024-06-15 22:18:21,593: WARNING: grid_search_reduction: No module named 'fairlearn': GridSearchReduction will be unavailable. To install, run:
+pip install 'aif360[Reductions]']
+[2024-06-15 22:18:21,594: WARNING: grid_search_reduction: No module named 'fairlearn': GridSearchReduction will be unavailable. To install, run:
+pip install 'aif360[Reductions]']
+[2024-06-15 22:18:21,694: INFO: main: >>>>> Stage Data Ingestion started <<<<<]
+[2024-06-15 22:18:21,696: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-06-15 22:18:21,696: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-06-15 22:18:21,696: INFO: common: created directory at: artifacts]
+[2024-06-15 22:18:21,697: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-06-15 22:18:22,589: INFO: data_ingestion: artifacts/data_ingestion/data.zip downloaded!]
+[2024-06-15 22:18:22,593: INFO: main: >>>>> Stage Data Ingestion completed <<<<<]
+[2024-06-15 22:18:22,593: INFO: main: ********************************************]
+[2024-06-15 22:18:22,593: INFO: main: >>>>> Stage Preprocessing Data started <<<<<]
+[2024-06-15 22:18:22,595: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-06-15 22:18:22,596: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-06-15 22:18:22,596: INFO: common: created directory at: artifacts]
+[2024-06-15 22:18:22,596: INFO: common: created directory at: artifacts/preprocessing_data]
+[2024-06-15 22:18:22,633: INFO: preprocessing_data: 
+
+X train shape: (820, 14)]
+[2024-06-15 22:18:22,633: INFO: preprocessing_data: 
+
+X test shape: (205, 14)]
+[2024-06-15 22:18:22,633: INFO: preprocessing_data: 
+
+y train shape: (820, 1)]
+[2024-06-15 22:18:22,633: INFO: preprocessing_data: 
+
+y test shape: (205, 1)]
+[2024-06-15 22:18:22,633: INFO: preprocessing_data: Preprocessing completed and saved : artifacts/preprocessing_data]
+[2024-06-15 22:18:22,633: INFO: main: >>>>> Stage Preprocessing Data completed <<<<<]
+[2024-06-15 22:18:22,633: INFO: main: ********************************************]
+[2024-06-15 22:18:22,633: INFO: main: >>>>> Stage Preparing Models started <<<<<]
+[2024-06-15 22:18:22,634: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-06-15 22:18:22,635: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-06-15 22:18:22,635: INFO: common: created directory at: artifacts]
+[2024-06-15 22:18:22,635: INFO: common: created directory at: artifacts/prepare_models]
+[2024-06-15 22:18:22,639: INFO: prepare_model: Training model: DecisionTreeClassifier(max_depth=5, min_samples_split=10)]
+[2024-06-15 22:18:22,647: INFO: prepare_model: Accuracy of DecisionTreeClassifier(max_depth=5, min_samples_split=10) is 0.8975609756097561]
+[2024-06-15 22:18:22,652: INFO: prepare_model: Classification report of DecisionTreeClassifier(max_depth=5, min_samples_split=10) is               precision    recall  f1-score   support
+
+         0.0       0.94      0.84      0.89        98
+         1.0       0.86      0.95      0.91       107
+
+    accuracy                           0.90       205
+   macro avg       0.90      0.90      0.90       205
+weighted avg       0.90      0.90      0.90       205
+]
+[2024-06-15 22:18:22,656: INFO: prepare_model: Training model: RandomForestClassifier(max_depth=5)]
+[2024-06-15 22:18:22,749: INFO: prepare_model: Accuracy of RandomForestClassifier(max_depth=5) is 0.9512195121951219]
+[2024-06-15 22:18:22,754: INFO: prepare_model: Classification report of RandomForestClassifier(max_depth=5) is               precision    recall  f1-score   support
+
+         0.0       0.98      0.92      0.95        98
+         1.0       0.93      0.98      0.95       107
+
+    accuracy                           0.95       205
+   macro avg       0.95      0.95      0.95       205
+weighted avg       0.95      0.95      0.95       205
+]
+[2024-06-15 22:18:22,758: INFO: prepare_model: Training model: GradientBoostingClassifier()]
+[2024-06-15 22:18:22,882: INFO: prepare_model: Accuracy of GradientBoostingClassifier() is 0.9902439024390244]
+[2024-06-15 22:18:22,886: INFO: prepare_model: Classification report of GradientBoostingClassifier() is               precision    recall  f1-score   support
+
+         0.0       1.00      0.98      0.99        98
+         1.0       0.98      1.00      0.99       107
+
+    accuracy                           0.99       205
+   macro avg       0.99      0.99      0.99       205
+weighted avg       0.99      0.99      0.99       205
+]
+[2024-06-15 22:18:22,892: INFO: prepare_model: Training model: VotingClassifier(estimators=[('decision_tree',
+                              DecisionTreeClassifier(max_depth=5,
+                                                     min_samples_split=10)),
+                             ('random_forest',
+                              RandomForestClassifier(max_depth=5)),
+                             ('gradient_boosting',
+                              GradientBoostingClassifier())]) using VotingClassifier and hard voting]
+[2024-06-15 22:18:23,114: INFO: prepare_model: Accuracy of VotingClassifier(estimators=[('decision_tree',
+                              DecisionTreeClassifier(max_depth=5,
+                                                     min_samples_split=10)),
+                             ('random_forest',
+                              RandomForestClassifier(max_depth=5)),
+                             ('gradient_boosting',
+                              GradientBoostingClassifier())]) is 0.9707317073170731]
+[2024-06-15 22:18:23,120: INFO: prepare_model: Classification report of VotingClassifier(estimators=[('decision_tree',
+                              DecisionTreeClassifier(max_depth=5,
+                                                     min_samples_split=10)),
+                             ('random_forest',
+                              RandomForestClassifier(max_depth=5)),
+                             ('gradient_boosting',
+                              GradientBoostingClassifier())]) is               precision    recall  f1-score   support
+
+         0.0       0.99      0.95      0.97        98
+         1.0       0.95      0.99      0.97       107
+
+    accuracy                           0.97       205
+   macro avg       0.97      0.97      0.97       205
+weighted avg       0.97      0.97      0.97       205
+]
+[2024-06-15 22:18:23,133: INFO: main: >>>>> Stage Preparing Models completed <<<<<]
